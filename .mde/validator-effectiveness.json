@@ -4,7 +4,7 @@
     {
       "tool": "json-syntax-check",
       "category": "Technical",
-      "total_runs": 1,
+      "total_runs": 2,
       "total_findings": 0,
       "critical_findings_found": 0,
       "high_findings_found": 0,
@@ -29,6 +29,36 @@
       "average_execution_time_seconds": null,
       "average_cost": null,
       "last_useful_finding_generation": null,
+      "recommendation": "keep"
+    },
+    {
+      "tool": "client-intake-template-coverage-review",
+      "category": "Usability",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-001",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "missing-info-safety-review",
+      "category": "Functional",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-001",
       "recommendation": "keep"
     }
   ],

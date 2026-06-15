@@ -1,15 +1,15 @@
 # Generation Summary
 
 Focus:
-Bootstrap Generation 0 for the Client Website Build Brief Generator.
+Generation 0 foundation plus a client-facing website intake worksheet.
 
 Codebase Change:
-- Files changed: 21
+- Files changed: 25
 - Production files: 0
 - Test files: 0
-- LOC added: 1088
-- LOC deleted: 0
-- Net LOC: 1088
+- LOC added: 432
+- LOC deleted: 9
+- Net LOC: 423
 
 Validation Result:
 - Gate: not run
@@ -28,9 +28,10 @@ Useful Signals:
 - Project-specific validation strategy was seeded.
 - Stale assessment, missing client detail, confidentiality, and traceability risks are explicit.
 - Repository initialized on `main`.
+- `docs/client-intake-template.md` now provides a fillable pre-launch client worksheet.
 
 Noisy / Low-Signal Validators:
 - None yet.
 
 Recommendation:
-- Confirm upstream schemas and create controlled fixtures before implementation.
+- Fill `docs/client-intake-template.md` with a real client, then pair it with assessment and demand data before generating the launch pack.

@@ -121,6 +121,19 @@
       "evidence": [
         ".mde/outbox/events.jsonl"
       ]
+    },
+    {
+      "task_id": "G0-012",
+      "title": "Create client intake worksheet",
+      "status": "completed",
+      "priority": "High",
+      "depends_on": [
+        "G0-001"
+      ],
+      "evidence": [
+        "docs/client-intake-template.md"
+      ],
+      "output": "Client-facing worksheet for collecting business basics, services, service areas, proof, assets, SEO/AEO inputs, assessment notes, technical details, privacy constraints, approvals, and launch-pack readiness."
     }
   ],
   "updated_at": "2026-06-15"

@@ -1,0 +1,49 @@
+{
+  "validation_run_id": "VAL-001",
+  "validation_run_type": "client_intake_template_check",
+  "generation": 0,
+  "phase": "Generation 0",
+  "started_at": "2026-06-15",
+  "completed_at": "2026-06-15",
+  "strategy_version": "VALSTRAT-client-website-build-brief-generator-002",
+  "counts_toward_phase_exit": false,
+  "validations_executed": [
+    {
+      "name": "client-intake-template-coverage-review",
+      "category": "Usability",
+      "result": "pass",
+      "evidence": [
+        "docs/client-intake-template.md includes business basics, services, service areas, conversion path, trust proof, content/assets, SEO/AEO, assessment notes, technical/deployment, privacy/compliance, approvals, and launch-pack readiness."
+      ]
+    },
+    {
+      "name": "missing-info-safety-review",
+      "category": "Functional",
+      "result": "pass",
+      "evidence": [
+        "Template instructs users to leave unknown answers blank, mark verification needs, and avoid invented claims."
+      ]
+    }
+  ],
+  "validations_skipped": [
+    {
+      "name": "full Validation Gate",
+      "reason": "Generator implementation and generated launch pack do not exist yet."
+    },
+    {
+      "name": "json-schema-validation",
+      "reason": "This change adds a human-fillable Markdown intake worksheet, not a structured JSON input schema."
+    }
+  ],
+  "critical_findings": [],
+  "high_findings": [],
+  "coverage": {
+    "client_intake_worksheet": 1,
+    "missing_client_detail_prompting": 1,
+    "structured_generator_input_schema": 0
+  },
+  "gate_result": "pass",
+  "phase_exit_pass_count_after_run": 0,
+  "reason": "The client intake worksheet is usable for pre-launch data collection, but this check does not count as a phase-exit Validation Gate pass.",
+  "evidence_quality": "adequate"
+}

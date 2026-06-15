@@ -12,7 +12,8 @@
     },
     {
       "item": "Define client intake schema ideas.",
-      "status": "pending"
+      "status": "completed",
+      "evidence": "docs/client-intake-template.md"
     },
     {
       "item": "Define stale assessment checks.",
