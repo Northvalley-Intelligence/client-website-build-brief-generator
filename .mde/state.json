@@ -1,0 +1,35 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "generation": 0,
+  "phase": "Generation 0",
+  "phase_goal": "Define mission, project identity, dependencies, risk register, initial task graph, and validation strategy before implementation.",
+  "mde_status": "generation_0_bootstrapped",
+  "implementation_status": "not_started",
+  "current_focus": [
+    "consume demand data and website assessment reports",
+    "detect stale assessment data",
+    "identify missing client details",
+    "protect privacy and confidentiality",
+    "generate client questions, website mission, technical brief, content-needed checklist, validation strategy suggestion, and Codex build prompt",
+    "record outbox event for central mde"
+  ],
+  "loaded_context_packs": [
+    "client-website-build",
+    "website-assessment-to-build"
+  ],
+  "deferred_context_packs": [
+    {
+      "context_pack": "pdf-generation",
+      "reason": "Not loaded during bootstrap because PDF/report output has not been selected for implementation."
+    }
+  ],
+  "validation_strategy_id": "VALSTRAT-client-website-build-brief-generator-002",
+  "validation_gate": {
+    "required_passes": 2,
+    "pass_count": 0,
+    "status": "not_run",
+    "reason": "Generation 0 bootstrap artifacts are created, but no implementation or full validation gate has run yet."
+  },
+  "next_recommended_action": "Confirm upstream input schemas and create controlled fixtures for stale assessment, missing client detail, confidentiality, and traceability checks.",
+  "updated_at": "2026-06-15"
+}

@@ -1,0 +1,78 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "generation": 0,
+  "status": "draft_scenarios_for_generator_implementation",
+  "scenarios": [
+    {
+      "bdd_id": "BDD-C001",
+      "severity": "Critical",
+      "category": "Functional",
+      "title": "Assessment freshness is evaluated before current-site claims are used",
+      "given": "An assessment input includes a scan date that is stale or missing",
+      "when": "the generator prepares a client website build brief",
+      "then": "the output flags the assessment freshness risk and requires verification before making current-site claims",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C002",
+      "severity": "Critical",
+      "category": "Functional",
+      "title": "Missing client details become questions instead of invented claims",
+      "given": "client intake is missing reviews, licenses, service guarantees, service areas, staff names, or project proof",
+      "when": "the generator prepares the brief and Codex build prompt",
+      "then": "the output lists the missing details as client questions or content-needed items and does not invent the claims",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C003",
+      "severity": "Critical",
+      "category": "Mission Coverage",
+      "title": "Generated client artifacts are client-safe",
+      "given": "the generator has access to central MDE context and project-specific client inputs",
+      "when": "it produces a launch pack for a future client repo",
+      "then": "the launch pack includes only client-safe local MDE seeds and excludes central private ledgers, cross-client lessons, and confidential internal strategy",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C004",
+      "severity": "Critical",
+      "category": "Functional",
+      "title": "Required launch pack artifacts are generated together",
+      "given": "valid assessment evidence and required client intake are available",
+      "when": "the generator runs",
+      "then": "it produces client questions, website mission, technical brief, content-needed checklist, validation strategy suggestion, deployment checklist, and codex-build.prompt.md",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C005",
+      "severity": "Critical",
+      "category": "Technical",
+      "title": "Generated prompts enforce the Northvalley technical baseline",
+      "given": "a future client website build prompt is generated",
+      "when": "the prompt describes the implementation stack and validation checks",
+      "then": "it requires Northvalley-Intelligence repo target, main branch, Next.js, TypeScript, React, npm, package-lock.json, Node 22, OpenNext Cloudflare, wrangler, ESLint, typecheck, Vitest, Playwright, and npm audit",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-H001",
+      "severity": "High",
+      "category": "Functional",
+      "title": "Unsupported assessment failure claims require evidence or verification",
+      "given": "an assessment mentions broken links, broken images, missing service-area pages, missing Google Business Profile, or missing schema without exact evidence",
+      "when": "the generator creates recommendations",
+      "then": "it preserves exact evidence when available and otherwise marks the recommendation as verify-before-implementing",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-H002",
+      "severity": "High",
+      "category": "Usability",
+      "title": "The generated handoff is directly usable in a new repo",
+      "given": "a generated launch pack is complete",
+      "when": "Ferosh starts a new client website repo",
+      "then": "the codex-build.prompt.md is standalone and the client questions and content-needed checklist clearly separate launch-blocking items from post-launch items",
+      "automation_status": "not_implemented"
+    }
+  ],
+  "updated_at": "2026-06-15"
+}

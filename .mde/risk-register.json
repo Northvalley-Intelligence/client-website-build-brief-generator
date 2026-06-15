@@ -1,0 +1,69 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "risks": [
+    {
+      "risk_id": "RISK-001",
+      "severity": "Critical",
+      "category": "Mission Coverage",
+      "summary": "Stale assessment data could produce misleading current-site claims.",
+      "impact": "A generated website build prompt may fix or cite problems that are no longer true.",
+      "mitigation": "Require scan date, source, freshness status, and verification instructions for stale or undated assessments.",
+      "status": "open"
+    },
+    {
+      "risk_id": "RISK-002",
+      "severity": "Critical",
+      "category": "Privacy",
+      "summary": "Generated client artifacts could leak private central MDE strategy or cross-client learning.",
+      "impact": "Client repos could expose confidential internal data.",
+      "mitigation": "Add client-safe artifact review and keep central private ledgers out of generated outputs.",
+      "status": "open"
+    },
+    {
+      "risk_id": "RISK-003",
+      "severity": "Critical",
+      "category": "Functional",
+      "summary": "Missing client facts could be invented by generation logic.",
+      "impact": "Generated websites may claim fake reviews, licenses, locations, guarantees, team details, or project proof.",
+      "mitigation": "Generate missing client detail questions and content-needed checklist; block unsupported claims.",
+      "status": "open"
+    },
+    {
+      "risk_id": "RISK-004",
+      "severity": "High",
+      "category": "Functional",
+      "summary": "Assessment report findings may lack exact evidence URLs or verification details.",
+      "impact": "Generated prompts may repeat unsupported broken link, broken image, or missing page claims.",
+      "mitigation": "Trace every recommendation to evidence, intake, or documented assumption; require verify-before-implementing for weak evidence.",
+      "status": "open"
+    },
+    {
+      "risk_id": "RISK-005",
+      "severity": "High",
+      "category": "Technical",
+      "summary": "Generated prompts may drift from the Northvalley website technical baseline.",
+      "impact": "Future client repos may use inconsistent stack, deployment, or validation tooling.",
+      "mitigation": "Validate generated technical brief for Next.js, TypeScript, Node 22, npm, OpenNext Cloudflare, wrangler, CI, tests, and audit checks.",
+      "status": "open"
+    },
+    {
+      "risk_id": "RISK-006",
+      "severity": "High",
+      "category": "Technical",
+      "summary": "Generated deployment instructions may omit main/prod synchronization and deployed SHA recording.",
+      "impact": "Production deployment could drift from reviewed repository state.",
+      "mitigation": "Require branch sync check when prod exists, deploy-source documentation, deployed SHA, Worker name, domain, and secrets checklist.",
+      "status": "open"
+    },
+    {
+      "risk_id": "RISK-007",
+      "severity": "Medium",
+      "category": "Usability",
+      "summary": "Generated launch packs may be difficult to use in a new client repo.",
+      "impact": "Ferosh may need to manually reconstruct missing instructions or private context.",
+      "mitigation": "Validate handoff clarity, grouped client questions, explicit assumptions, and standalone codex-build.prompt.md.",
+      "status": "open"
+    }
+  ],
+  "updated_at": "2026-06-15"
+}

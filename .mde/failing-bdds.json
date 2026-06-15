@@ -1,0 +1,7 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "generation": 0,
+  "failing_bdds": [],
+  "note": "No executable BDDs exist yet. Draft scenarios are recorded in .mde/bdd-index.json for the first implementation generation.",
+  "updated_at": "2026-06-15"
+}

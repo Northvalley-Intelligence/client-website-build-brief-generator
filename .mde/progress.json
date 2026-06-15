@@ -1,0 +1,39 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "generation": 0,
+  "checklist": [
+    {
+      "item": "Create local MDE files.",
+      "status": "completed"
+    },
+    {
+      "item": "Confirm upstream assessment data sources.",
+      "status": "pending"
+    },
+    {
+      "item": "Define client intake schema ideas.",
+      "status": "pending"
+    },
+    {
+      "item": "Define stale assessment checks.",
+      "status": "pending"
+    },
+    {
+      "item": "Define missing client detail checks.",
+      "status": "pending"
+    },
+    {
+      "item": "Define confidentiality checks.",
+      "status": "pending"
+    },
+    {
+      "item": "Generate first sample brief from controlled sample data.",
+      "status": "pending"
+    },
+    {
+      "item": "Record outbox event and learning triage.",
+      "status": "completed"
+    }
+  ],
+  "updated_at": "2026-06-15"
+}

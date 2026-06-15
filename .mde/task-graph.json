@@ -1,0 +1,127 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "generation": 0,
+  "tasks": [
+    {
+      "task_id": "G0-001",
+      "title": "Create local MDE files",
+      "status": "completed",
+      "priority": "Critical",
+      "depends_on": [],
+      "evidence": [
+        "MISSION.md",
+        ".mde/state.json",
+        ".mde/project.json",
+        ".mde/validation-strategy.json"
+      ]
+    },
+    {
+      "task_id": "G0-002",
+      "title": "Confirm upstream assessment data sources",
+      "status": "pending",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-001"
+      ],
+      "output": "Document accepted local-website-growth-assessment report and JSON schemas, including source URL, scan date, evidence URL, confidence, and freshness fields."
+    },
+    {
+      "task_id": "G0-003",
+      "title": "Confirm upstream demand data sources",
+      "status": "pending",
+      "priority": "High",
+      "depends_on": [
+        "G0-001"
+      ],
+      "output": "Document demand signal format, service-area demand fields, and recency metadata."
+    },
+    {
+      "task_id": "G0-004",
+      "title": "Define generator input schema",
+      "status": "pending",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-002",
+        "G0-003"
+      ],
+      "output": "Schema for assessment evidence, client intake, demand signals, technical preferences, and generation options."
+    },
+    {
+      "task_id": "G0-005",
+      "title": "Define stale assessment checks",
+      "status": "pending",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-004"
+      ],
+      "output": "Freshness policy with blocking, warning, and verify-before-implementing behavior."
+    },
+    {
+      "task_id": "G0-006",
+      "title": "Define missing client detail checks",
+      "status": "pending",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-004"
+      ],
+      "output": "Required and optional client detail fields mapped to questions and content-needed checklist items."
+    },
+    {
+      "task_id": "G0-007",
+      "title": "Define confidentiality checks",
+      "status": "pending",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-004"
+      ],
+      "output": "Rules that exclude private central MDE ledgers, cross-client lessons, and confidential internal strategy from generated client-safe artifacts."
+    },
+    {
+      "task_id": "G0-008",
+      "title": "Define output artifact contract",
+      "status": "pending",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-004",
+        "G0-005",
+        "G0-006",
+        "G0-007"
+      ],
+      "output": "Contract for questions, mission, technical brief, content-needed checklist, validation strategy suggestion, deployment checklist, and codex-build.prompt.md."
+    },
+    {
+      "task_id": "G0-009",
+      "title": "Create controlled sample fixtures",
+      "status": "pending",
+      "priority": "High",
+      "depends_on": [
+        "G0-008"
+      ],
+      "output": "Fixtures for missing service-area evidence, AEO gaps, local visibility gaps, broken link/image claims, and prod branch policy."
+    },
+    {
+      "task_id": "G0-010",
+      "title": "Generate first sample brief from controlled sample data",
+      "status": "pending",
+      "priority": "High",
+      "depends_on": [
+        "G0-008",
+        "G0-009"
+      ],
+      "output": "Sample generated launch pack and traceability matrix."
+    },
+    {
+      "task_id": "G0-011",
+      "title": "Record outbox event and learning triage",
+      "status": "completed",
+      "priority": "High",
+      "depends_on": [
+        "G0-001"
+      ],
+      "evidence": [
+        ".mde/outbox/events.jsonl"
+      ]
+    }
+  ],
+  "updated_at": "2026-06-15"
+}

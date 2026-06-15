@@ -1,0 +1,62 @@
+{
+  "validation_run_id": "VAL-000",
+  "validation_run_type": "bootstrap_artifact_check",
+  "generation": 0,
+  "phase": "Generation 0",
+  "started_at": "2026-06-15",
+  "completed_at": "2026-06-15",
+  "strategy_version": "VALSTRAT-client-website-build-brief-generator-002",
+  "counts_toward_phase_exit": false,
+  "validations_executed": [
+    {
+      "name": "required-artifact-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        "MISSION.md",
+        "MISSION_UPDATES.md",
+        "AGENTS.md",
+        ".mde/project.json",
+        ".mde/state.json",
+        ".mde/validation-strategy.json",
+        ".mde/risk-register.json",
+        ".mde/task-graph.json",
+        ".mde/outbox/events.jsonl",
+        "deploy/release-checks.json"
+      ]
+    },
+    {
+      "name": "json-syntax-check",
+      "category": "Technical",
+      "result": "pass",
+      "evidence": [
+        "Parsed 16 JSON/JSONL files successfully after VAL-000 and GEN-000 were added."
+      ]
+    }
+  ],
+  "validations_skipped": [
+    {
+      "name": "full Validation Gate",
+      "reason": "Generator implementation and sample generated launch pack do not exist yet."
+    },
+    {
+      "name": "sample fixture validation",
+      "reason": "Controlled fixtures have not been created yet."
+    },
+    {
+      "name": "external generated-output-link-check",
+      "reason": "No generated output contains outbound links yet."
+    }
+  ],
+  "critical_findings": [],
+  "high_findings": [],
+  "coverage": {
+    "generation_0_bootstrap_artifacts": 1,
+    "required_context_packs_loaded": 1,
+    "implementation_validation_coverage": 0
+  },
+  "gate_result": "pass",
+  "phase_exit_pass_count_after_run": 0,
+  "reason": "Bootstrap artifacts were created and parsed, but this check does not count as a phase-exit Validation Gate pass.",
+  "evidence_quality": "adequate"
+}

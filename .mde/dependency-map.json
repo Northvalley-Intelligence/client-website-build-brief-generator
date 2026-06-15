@@ -1,0 +1,56 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "upstream_dependencies": [
+    {
+      "dependency": "demand-data-generation",
+      "status": "unconfirmed",
+      "needed_for": [
+        "prioritizing services and service areas",
+        "identifying market demand signals",
+        "supporting SEO/AEO recommendations"
+      ],
+      "generation_0_action": "Confirm available export format and freshness metadata."
+    },
+    {
+      "dependency": "local-website-growth-assessment",
+      "status": "unconfirmed",
+      "needed_for": [
+        "assessment evidence summary",
+        "current-site gap detection",
+        "broken link/image evidence",
+        "local visibility, AEO, conversion, and technical findings"
+      ],
+      "generation_0_action": "Confirm report and JSON schema, scan date field, evidence URL format, and confidence levels."
+    },
+    {
+      "dependency": "mde",
+      "status": "available_as_launch_pack",
+      "needed_for": [
+        "project-specific validation strategy",
+        "context pack rules",
+        "outbox event ingestion",
+        "learning triage"
+      ],
+      "generation_0_action": "Keep central MDE data outside generated client-safe artifacts."
+    }
+  ],
+  "downstream_dependencies": [
+    {
+      "dependency": "future-client-website-repos",
+      "status": "planned",
+      "receives": [
+        "codex-build.prompt.md",
+        "MISSION.md seed",
+        ".mde/project.json seed",
+        ".mde/validation-strategy.json seed",
+        "docs/client-intake-needed.md",
+        "docs/content-needed-from-client.md",
+        "docs/website-build-brief.md",
+        "docs/launch-validation-plan.md",
+        "docs/deployment.md"
+      ],
+      "safety_rule": "Generated client repos must not include central private ledgers, cross-client lessons, or confidential internal strategy."
+    }
+  ],
+  "updated_at": "2026-06-15"
+}

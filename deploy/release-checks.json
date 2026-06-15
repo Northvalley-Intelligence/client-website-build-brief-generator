@@ -1,0 +1,14 @@
+{
+  "project_id": "client-website-build-brief-generator",
+  "deployment_involved": false,
+  "production_deploy_allowed": false,
+  "reason": "Generation 0 bootstrap only. No generator implementation or deploy target exists yet.",
+  "future_release_checks": [
+    "build succeeds",
+    "tests pass",
+    "generated output schemas validate",
+    "privacy/confidentiality review passes",
+    "sample generated launch pack passes validation gate twice"
+  ],
+  "updated_at": "2026-06-15"
+}
