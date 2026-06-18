@@ -1,7 +1,7 @@
 # Generation Summary
 
 Focus:
-Generation 0 foundation plus a client-facing website intake worksheet.
+Generation 0 foundation, client-facing intake worksheet, and public MDE-focused README.
 
 Codebase Change:
 - Files changed: 25
@@ -34,4 +34,4 @@ Noisy / Low-Signal Validators:
 - None yet.
 
 Recommendation:
-- Fill `docs/client-intake-template.md` with a real client, then pair it with assessment and demand data before generating the launch pack.
+- Keep raw client inputs private, then implement structured generation from the intake template plus assessment and demand data.

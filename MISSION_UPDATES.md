@@ -13,3 +13,10 @@ Keep this concise and human-readable.
 - Reason: Ferosh needs a file to fill with a client before generating the website launch pack.
 - Discovered through: direct user request.
 - Impact: `docs/client-intake-template.md` now captures client facts, missing information, assessment freshness inputs, service areas, trust proof, conversion paths, and launch-readiness checks.
+
+## 2026-06-18
+
+- Mission update: Prepared the repository for public visibility.
+- Reason: Ferosh requested a public README focused on the MDE concepts behind the project.
+- Discovered through: direct user request.
+- Impact: `README.md` now explains the MDE workflow, raw client intake folders are ignored, and project confidentiality is recorded as public generator code with private client inputs excluded.

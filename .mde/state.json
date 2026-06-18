@@ -3,7 +3,7 @@
   "generation": 0,
   "phase": "Generation 0",
   "phase_goal": "Define mission, project identity, dependencies, risk register, initial task graph, and validation strategy before implementation.",
-  "mde_status": "generation_0_bootstrapped",
+  "mde_status": "generation_0_public_readme_ready",
   "implementation_status": "not_started",
   "current_focus": [
     "consume demand data and website assessment reports",
@@ -30,6 +30,6 @@
     "status": "not_run",
     "reason": "Generation 0 bootstrap artifacts are created, but no implementation or full validation gate has run yet."
   },
-  "next_recommended_action": "Use docs/client-intake-template.md for client conversations, then convert the filled worksheet plus assessment and demand data into structured generator input.",
-  "updated_at": "2026-06-15"
+  "next_recommended_action": "Keep raw client inputs private, then implement structured generation from docs/client-intake-template.md plus assessment and demand data.",
+  "updated_at": "2026-06-18"
 }

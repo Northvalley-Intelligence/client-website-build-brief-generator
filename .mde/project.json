@@ -27,8 +27,8 @@
   "downstream_dependencies": [
     "future-client-website-repos"
   ],
-  "confidentiality": "private",
+  "confidentiality": "public_repository_private_client_inputs_excluded",
   "launch_pack": "../mde/project-launches/client-website-build-brief-generator",
   "created_at": "2026-06-15",
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-18"
 }
