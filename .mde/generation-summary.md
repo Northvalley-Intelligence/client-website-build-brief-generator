@@ -1,7 +1,7 @@
 # Generation Summary
 
 Focus:
-Generation 0 foundation, client-facing intake worksheet, and public MDE-focused README.
+Generation 0 foundation, public MDE README, and client-friendly intake portal specification.
 
 Codebase Change:
 - Files changed: 25
@@ -29,9 +29,11 @@ Useful Signals:
 - Stale assessment, missing client detail, confidentiality, and traceability risks are explicit.
 - Repository initialized on `main`.
 - `docs/client-intake-template.md` now provides a fillable pre-launch client worksheet.
+- `docs/intake-portal-product-spec.md` defines the planned client intake portal and keeps technical details collapsed/optional.
+- `.mde/intake-portal-form-schema.json` maps the smallest mandatory fields and optional sections to launch-package artifacts.
 
 Noisy / Low-Signal Validators:
 - None yet.
 
 Recommendation:
-- Keep raw client inputs private, then implement structured generation from the intake template plus assessment and demand data.
+- Implement the intake portal from the spec/schema, using private storage for submissions and public repo artifacts only for workflow/schema.

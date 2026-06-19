@@ -60,7 +60,37 @@
       "average_cost": null,
       "last_useful_finding_generation": "GEN-001",
       "recommendation": "keep"
+    },
+    {
+      "tool": "intake-portal-field-minimization-review",
+      "category": "Usability",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-003",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "intake-portal-privacy-review",
+      "category": "Privacy",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-003",
+      "recommendation": "keep"
     }
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-19"
 }

@@ -20,3 +20,10 @@ Keep this concise and human-readable.
 - Reason: Ferosh requested a public README focused on the MDE concepts behind the project.
 - Discovered through: direct user request.
 - Impact: `README.md` now explains the MDE workflow, raw client intake folders are ignored, and project confidentiality is recorded as public generator code with private client inputs excluded.
+
+## 2026-06-19
+
+- Mission update: Defined the North Valley intake portal strategy.
+- Reason: Ferosh wants a client-friendly intake link on a North Valley subdomain with non-technical fields first and technical details collapsed/optional.
+- Discovered through: direct user request plus review of common website questionnaire patterns and form UX guidance.
+- Impact: `docs/intake-portal-product-spec.md` and `.mde/intake-portal-form-schema.json` define the smallest mandatory intake, optional expanded fields, assessment/demand defaults, upload limits, privacy rules, lifecycle states, and launch-package mappings.

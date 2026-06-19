@@ -1,0 +1,70 @@
+{
+  "validation_run_id": "VAL-003",
+  "validation_run_type": "intake_portal_strategy_check",
+  "generation": 0,
+  "phase": "Generation 0",
+  "started_at": "2026-06-19",
+  "completed_at": "2026-06-19",
+  "strategy_version": "VALSTRAT-client-website-build-brief-generator-002",
+  "counts_toward_phase_exit": false,
+  "validations_executed": [
+    {
+      "name": "intake-portal-field-minimization-review",
+      "category": "Usability",
+      "result": "pass",
+      "evidence": [
+        "The portal spec limits first-submit mandatory fields to business name, primary contact, current website status, business description, offerings, audience, primary market, primary action, and consent.",
+        "Technical fields are collapsed and optional."
+      ]
+    },
+    {
+      "name": "assessment-default-safety-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        "Assessment and demand defaults are labeled as suggestions and must be confirmed, corrected, or removed by the client.",
+        "Stale, weak, or unavailable data becomes verify-before-implementing follow-up instead of public claims."
+      ]
+    },
+    {
+      "name": "intake-portal-privacy-review",
+      "category": "Privacy",
+      "result": "pass",
+      "evidence": [
+        "The spec blocks credentials, passwords, API keys, registrar logins, Cloudflare tokens, and Google passwords from public form collection.",
+        "Completed intake submissions remain private and outside the public repository."
+      ]
+    },
+    {
+      "name": "launch-package-mapping-review",
+      "category": "Functional",
+      "result": "pass",
+      "evidence": [
+        ".mde/intake-portal-form-schema.json maps intake fields to MISSION.md, client summary, missing-info docs, build brief, deployment docs, validation plan, and codex-build.prompt.md."
+      ]
+    }
+  ],
+  "validations_skipped": [
+    {
+      "name": "full Validation Gate",
+      "reason": "This generation specifies the intake portal strategy and schema but does not implement the portal yet."
+    },
+    {
+      "name": "browser workflow validation",
+      "reason": "No rendered intake portal exists yet."
+    }
+  ],
+  "critical_findings": [],
+  "high_findings": [],
+  "coverage": {
+    "client_friendly_mandatory_fields": 1,
+    "technical_optional_collapse": 1,
+    "assessment_default_safety": 1,
+    "privacy_no_secret_collection": 1,
+    "implementation_validation_coverage": 0
+  },
+  "gate_result": "pass",
+  "phase_exit_pass_count_after_run": 0,
+  "reason": "The strategy and schema pass design-level checks, but this does not count as a phase-exit Validation Gate pass.",
+  "evidence_quality": "adequate"
+}

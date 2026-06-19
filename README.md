@@ -50,6 +50,14 @@ The current intake worksheet template is:
 
 `docs/client-intake-template.md`
 
+The planned intake portal product spec is:
+
+`docs/intake-portal-product-spec.md`
+
+The draft structured form schema is:
+
+`.mde/intake-portal-form-schema.json`
+
 Raw completed client intakes and client input files should stay local or private and are ignored by default.
 
 ## Validation Strategy

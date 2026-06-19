@@ -72,7 +72,47 @@
       "when": "Ferosh starts a new client website repo",
       "then": "the codex-build.prompt.md is standalone and the client questions and content-needed checklist clearly separate launch-blocking items from post-launch items",
       "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C006",
+      "severity": "Critical",
+      "category": "Usability",
+      "title": "Client can submit the intake without answering technical questions",
+      "given": "a client opens a tokenized intake link",
+      "when": "they complete the required business, offering, location, conversion, and consent fields",
+      "then": "they can submit the intake while the technical details section remains collapsed and unanswered",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C007",
+      "severity": "Critical",
+      "category": "Privacy",
+      "title": "Intake portal does not collect secrets",
+      "given": "a client opens the optional technical section",
+      "when": "they answer domain, DNS, Cloudflare, analytics, or integration questions",
+      "then": "the form asks only about status and ownership and never asks for passwords, API keys, registrar logins, Cloudflare tokens, or Google credentials",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C008",
+      "severity": "Critical",
+      "category": "Mission Coverage",
+      "title": "Assessment defaults are suggestions that require confirmation",
+      "given": "assessment or demand data provides suggested services, locations, contact details, or current-site findings",
+      "when": "the intake form prepopulates those values",
+      "then": "the client can confirm, edit, or remove each suggestion and unconfirmed values are not treated as public launch-package claims",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-H003",
+      "severity": "High",
+      "category": "Functional",
+      "title": "Submitted intake maps to launch-package artifacts",
+      "given": "a submitted intake has the minimal required fields and optional asset/proof details",
+      "when": "Ferosh marks it ready for launch-package generation",
+      "then": "the generator can create the client summary, missing-info checklist, content-needed checklist, website brief, validation plan, deployment notes, and codex-build.prompt.md from structured fields",
+      "automation_status": "not_implemented"
     }
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-19"
 }

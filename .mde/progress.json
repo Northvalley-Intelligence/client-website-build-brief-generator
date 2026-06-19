@@ -13,7 +13,11 @@
     {
       "item": "Define client intake schema ideas.",
       "status": "completed",
-      "evidence": "docs/client-intake-template.md"
+      "evidence": [
+        "docs/client-intake-template.md",
+        "docs/intake-portal-product-spec.md",
+        ".mde/intake-portal-form-schema.json"
+      ]
     },
     {
       "item": "Define stale assessment checks.",
@@ -36,5 +40,5 @@
       "status": "completed"
     }
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-19"
 }

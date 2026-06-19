@@ -134,7 +134,21 @@
         "docs/client-intake-template.md"
       ],
       "output": "Client-facing worksheet for collecting business basics, services, service areas, proof, assets, SEO/AEO inputs, assessment notes, technical details, privacy constraints, approvals, and launch-pack readiness."
+    },
+    {
+      "task_id": "G0-013",
+      "title": "Define intake portal product spec and schema",
+      "status": "completed",
+      "priority": "High",
+      "depends_on": [
+        "G0-012"
+      ],
+      "evidence": [
+        "docs/intake-portal-product-spec.md",
+        ".mde/intake-portal-form-schema.json"
+      ],
+      "output": "Client-friendly intake portal strategy with minimal mandatory fields, optional expanded details, collapsed technical section, assessment/demand defaults, upload limit, privacy rules, lifecycle states, and launch-package mappings."
     }
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-19"
 }

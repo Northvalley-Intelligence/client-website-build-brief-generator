@@ -3,7 +3,7 @@
   "generation": 0,
   "phase": "Generation 0",
   "phase_goal": "Define mission, project identity, dependencies, risk register, initial task graph, and validation strategy before implementation.",
-  "mde_status": "generation_0_public_readme_ready",
+  "mde_status": "generation_0_intake_portal_specified",
   "implementation_status": "not_started",
   "current_focus": [
     "consume demand data and website assessment reports",
@@ -30,6 +30,6 @@
     "status": "not_run",
     "reason": "Generation 0 bootstrap artifacts are created, but no implementation or full validation gate has run yet."
   },
-  "next_recommended_action": "Keep raw client inputs private, then implement structured generation from docs/client-intake-template.md plus assessment and demand data.",
-  "updated_at": "2026-06-18"
+  "next_recommended_action": "Implement the intake portal from docs/intake-portal-product-spec.md and .mde/intake-portal-form-schema.json, with client submissions stored privately outside this public repo.",
+  "updated_at": "2026-06-19"
 }

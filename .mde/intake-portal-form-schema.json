@@ -1,0 +1,483 @@
+{
+  "schema_id": "INTAKE-PORTAL-FORM-001",
+  "version": 1,
+  "status": "draft_product_spec",
+  "public_host": "intake.northvalleyintel.com",
+  "admin_path": "/admin",
+  "design_principles": [
+    "minimal mandatory fields",
+    "progressive disclosure",
+    "technical section collapsed by default",
+    "assessment and demand defaults are suggestions, not facts",
+    "missing information becomes follow-up, not invented copy",
+    "no secrets or credentials collected"
+  ],
+  "submission_lifecycle": [
+    "draft",
+    "submitted",
+    "review_needed",
+    "ready_for_launch_package",
+    "launch_package_generated",
+    "archived"
+  ],
+  "asset_limits": {
+    "priority_image_uploads": 5,
+    "allowed_first_flow_asset_types": [
+      "logo",
+      "hero",
+      "service_or_product",
+      "team_or_owner",
+      "proof_event_or_project"
+    ],
+    "requires_permission_status": true
+  },
+  "sections": [
+    {
+      "section_id": "welcome",
+      "title": "Welcome",
+      "client_visible": true,
+      "default_state": "open",
+      "required_to_submit": false,
+      "fields": []
+    },
+    {
+      "section_id": "business_basics",
+      "title": "Business Basics",
+      "client_visible": true,
+      "default_state": "open",
+      "required_to_submit": true,
+      "fields": [
+        {
+          "field_id": "business.public_name",
+          "label": "Public business name",
+          "type": "short_text",
+          "required": true,
+          "prefill_sources": [
+            "assessment.detected_business_name",
+            "client_invite.business_name"
+          ],
+          "launch_package_mapping": [
+            "MISSION.md",
+            "docs/client-intake-summary.md",
+            "docs/website-build-brief.md"
+          ]
+        },
+        {
+          "field_id": "contact.primary_name",
+          "label": "Best person for website questions",
+          "type": "short_text",
+          "required": true,
+          "prefill_sources": [
+            "client_invite.contact_name"
+          ],
+          "launch_package_mapping": [
+            "docs/client-intake-summary.md"
+          ]
+        },
+        {
+          "field_id": "contact.primary_email",
+          "label": "Best email",
+          "type": "email",
+          "required": true,
+          "prefill_sources": [
+            "client_invite.email",
+            "assessment.detected_email"
+          ],
+          "launch_package_mapping": [
+            "docs/client-intake-summary.md",
+            "docs/client-intake-needed.md"
+          ]
+        },
+        {
+          "field_id": "website.current_website_status",
+          "label": "Do you have a current website?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Yes",
+            "No, this is a new website",
+            "Not sure"
+          ],
+          "prefill_sources": [
+            "assessment.domain"
+          ],
+          "launch_package_mapping": [
+            "docs/client-intake-summary.md",
+            "docs/website-build-brief.md"
+          ]
+        },
+        {
+          "field_id": "website.desired_domain",
+          "label": "Desired domain",
+          "type": "url_or_domain",
+          "required": false,
+          "prefill_sources": [
+            "client_invite.domain",
+            "assessment.domain"
+          ],
+          "launch_package_mapping": [
+            "docs/deployment.md",
+            "docs/client-intake-needed.md"
+          ]
+        },
+        {
+          "field_id": "conversion.public_contact_preference",
+          "label": "How should visitors contact you?",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Contact form",
+            "Phone",
+            "Email",
+            "Booking link",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "docs/client-intake-needed.md"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "offer_and_audience",
+      "title": "What You Offer",
+      "client_visible": true,
+      "default_state": "open",
+      "required_to_submit": true,
+      "fields": [
+        {
+          "field_id": "offer.one_sentence_description",
+          "label": "In one sentence, what does your business do?",
+          "type": "long_text",
+          "required": true,
+          "launch_package_mapping": [
+            "MISSION.md",
+            "docs/website-build-brief.md",
+            "codex-build.prompt.md"
+          ]
+        },
+        {
+          "field_id": "offer.primary_offerings",
+          "label": "Top services or offerings",
+          "type": "repeatable_short_text",
+          "required": true,
+          "min_items": 1,
+          "recommended_max_items": 5,
+          "prefill_sources": [
+            "assessment.detected_services",
+            "demand.priority_services"
+          ],
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "docs/content-needed-from-client.md"
+          ]
+        },
+        {
+          "field_id": "audience.best_fit_customers",
+          "label": "Who are your best-fit customers?",
+          "type": "long_text",
+          "required": true,
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "codex-build.prompt.md"
+          ]
+        },
+        {
+          "field_id": "conversion.primary_action",
+          "label": "What should visitors do first?",
+          "type": "single_select",
+          "required": true,
+          "options": [
+            "Call",
+            "Request a quote",
+            "Schedule a consultation",
+            "Book online",
+            "Visit",
+            "Contact us",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "MISSION.md",
+            "docs/website-build-brief.md",
+            "codex-build.prompt.md"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "service_area",
+      "title": "Where You Work",
+      "client_visible": true,
+      "default_state": "open",
+      "required_to_submit": true,
+      "fields": [
+        {
+          "field_id": "location.primary_market",
+          "label": "Primary city or service area",
+          "type": "short_text",
+          "required": true,
+          "prefill_sources": [
+            "assessment.detected_locations",
+            "demand.priority_locations"
+          ],
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "docs/launch-validation-plan.md"
+          ]
+        },
+        {
+          "field_id": "location.additional_markets",
+          "label": "Other cities or areas served",
+          "type": "repeatable_short_text",
+          "required": false,
+          "prefill_sources": [
+            "assessment.detected_locations",
+            "demand.priority_locations"
+          ],
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "docs/content-needed-from-client.md"
+          ]
+        },
+        {
+          "field_id": "location.area_page_preference",
+          "label": "Should we create location pages now?",
+          "type": "single_select",
+          "required": false,
+          "options": [
+            "Yes",
+            "No",
+            "North Valley can decide",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "docs/launch-validation-plan.md"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "proof_and_assets",
+      "title": "Proof And Photos",
+      "client_visible": true,
+      "default_state": "open",
+      "required_to_submit": false,
+      "fields": [
+        {
+          "field_id": "assets.readiness",
+          "label": "Do you have logo/photos ready?",
+          "type": "single_select",
+          "required": false,
+          "options": [
+            "Yes",
+            "No",
+            "Need help",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "docs/content-needed-from-client.md"
+          ]
+        },
+        {
+          "field_id": "assets.priority_uploads",
+          "label": "Upload up to 5 priority images",
+          "type": "file_upload",
+          "required": false,
+          "max_files": 5,
+          "requires_permission_status": true,
+          "launch_package_mapping": [
+            "docs/content-needed-from-client.md",
+            "codex-build.prompt.md"
+          ]
+        },
+        {
+          "field_id": "proof.trust_sources",
+          "label": "What proof can we use?",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Reviews",
+            "Testimonials",
+            "Licenses",
+            "Certifications",
+            "Awards",
+            "Associations",
+            "Project examples",
+            "Before/after photos",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "docs/client-intake-needed.md",
+            "docs/content-needed-from-client.md"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "style_and_inspiration",
+      "title": "Style And Inspiration",
+      "client_visible": true,
+      "default_state": "collapsed_optional",
+      "required_to_submit": false,
+      "fields": [
+        {
+          "field_id": "brand.adjectives",
+          "label": "Choose words that should describe the site",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Professional",
+            "Warm",
+            "Elegant",
+            "Modern",
+            "Playful",
+            "Luxury",
+            "Practical",
+            "Local",
+            "Bold",
+            "Calm"
+          ],
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "codex-build.prompt.md"
+          ]
+        },
+        {
+          "field_id": "brand.inspiration_sites",
+          "label": "Websites you like and why",
+          "type": "repeatable_url_with_notes",
+          "required": false,
+          "launch_package_mapping": [
+            "docs/website-build-brief.md"
+          ]
+        },
+        {
+          "field_id": "brand.avoid",
+          "label": "Colors, styles, words, or claims to avoid",
+          "type": "long_text",
+          "required": false,
+          "launch_package_mapping": [
+            "docs/website-build-brief.md",
+            "docs/content-needed-from-client.md"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "technical_optional",
+      "title": "Optional Technical Details",
+      "client_visible": true,
+      "default_state": "collapsed_optional",
+      "required_to_submit": false,
+      "fields": [
+        {
+          "field_id": "technical.domain_registrar_known",
+          "label": "Do you know your domain registrar?",
+          "type": "short_text",
+          "required": false,
+          "launch_package_mapping": [
+            "docs/deployment.md",
+            "docs/client-intake-needed.md"
+          ]
+        },
+        {
+          "field_id": "technical.dns_host_known",
+          "label": "Do you know your DNS host?",
+          "type": "short_text",
+          "required": false,
+          "launch_package_mapping": [
+            "docs/deployment.md",
+            "docs/client-intake-needed.md"
+          ]
+        },
+        {
+          "field_id": "technical.cloudflare_status",
+          "label": "Cloudflare status",
+          "type": "single_select",
+          "required": false,
+          "options": [
+            "Already have Cloudflare",
+            "Need setup",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "docs/deployment.md"
+          ]
+        },
+        {
+          "field_id": "technical.integrations",
+          "label": "Tools the website should connect to",
+          "type": "multi_select",
+          "required": false,
+          "options": [
+            "Google Analytics",
+            "Google Business Profile",
+            "Search Console",
+            "Booking",
+            "CRM",
+            "Email newsletter",
+            "Payments",
+            "Chat",
+            "None",
+            "Not sure"
+          ],
+          "launch_package_mapping": [
+            "docs/deployment.md",
+            "docs/client-intake-needed.md"
+          ]
+        }
+      ],
+      "blocked_field_types": [
+        "password",
+        "api_key",
+        "secret_token",
+        "registrar_login",
+        "cloudflare_token",
+        "google_password"
+      ]
+    },
+    {
+      "section_id": "submit",
+      "title": "Review And Submit",
+      "client_visible": true,
+      "default_state": "open",
+      "required_to_submit": true,
+      "fields": [
+        {
+          "field_id": "approval.intake_use_consent",
+          "label": "North Valley can use this information to draft my website launch package.",
+          "type": "checkbox",
+          "required": true,
+          "launch_package_mapping": [
+            ".mde/project.json",
+            "docs/client-intake-summary.md"
+          ]
+        }
+      ]
+    }
+  ],
+  "assessment_default_rules": [
+    "Prefill from assessment only when source and scan date are recorded.",
+    "Label assessment-derived values as suggestions.",
+    "Ask client to confirm, correct, or remove defaults.",
+    "If data is stale, weak, or unavailable, mark it as verify-before-implementing.",
+    "Do not convert inferred defaults into public claims without client confirmation."
+  ],
+  "launch_package_outputs": [
+    "MISSION.md",
+    "MISSION_UPDATES.md",
+    ".mde/project.json",
+    ".mde/validation-strategy.json",
+    "docs/client-intake-summary.md",
+    "docs/client-intake-needed.md",
+    "docs/content-needed-from-client.md",
+    "docs/website-build-brief.md",
+    "docs/launch-validation-plan.md",
+    "docs/deployment.md",
+    "codex-build.prompt.md"
+  ],
+  "created_at": "2026-06-19",
+  "updated_at": "2026-06-19"
+}
