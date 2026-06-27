@@ -27,3 +27,10 @@ Keep this concise and human-readable.
 - Reason: Ferosh wants a client-friendly intake link on a North Valley subdomain with non-technical fields first and technical details collapsed/optional.
 - Discovered through: direct user request plus review of common website questionnaire patterns and form UX guidance.
 - Impact: `docs/intake-portal-product-spec.md` and `.mde/intake-portal-form-schema.json` define the smallest mandatory intake, optional expanded fields, assessment/demand defaults, upload limits, privacy rules, lifecycle states, and launch-package mappings.
+
+## 2026-06-27
+
+- Mission update: Refreshed local project details from central `../mde`.
+- Reason: Ferosh requested the project be refreshed with the latest central MDE details.
+- Discovered through: `../mde/prompts/existing-mde-open-session-sync.prompt.md`, `../mde/templates/project-outbox-contract.md`, `../mde/runbooks/repository-governance.md`, `../mde/briefings/current-platform-brief.md`, and `../mde/runbooks/third-person-validation-gate.md`.
+- Impact: Local MDE now preserves the existing mission/generations while adding the current outbox sync contract, portfolio sync metadata, repository governance expectations, summary-first reporting rules, and Third-Person Validation Gate tracking.

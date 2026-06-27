@@ -50,7 +50,17 @@
         "docs/deployment.md"
       ],
       "safety_rule": "Generated client repos must not include central private ledgers, cross-client lessons, or confidential internal strategy."
+    },
+    {
+      "dependency": "northvalley-client-success",
+      "status": "planned",
+      "receives": [
+        "future website delivery history",
+        "client support context",
+        "client project metadata"
+      ],
+      "safety_rule": "Only client-safe delivery/support context should flow downstream; central private ledgers and confidential internal strategy remain excluded."
     }
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-27"
 }

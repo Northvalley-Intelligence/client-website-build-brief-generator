@@ -1,7 +1,7 @@
 {
   "project_id": "client-website-build-brief-generator",
   "project_name": "Client Website Build Brief Generator",
-  "mde_status": "generation_0_intake_portal_specified",
+  "mde_status": "active",
   "artifact_profiles": [
     "website_assessment",
     "client_website",
@@ -13,12 +13,9 @@
     "client-website-build",
     "website-assessment-to-build"
   ],
-  "context_packs_deferred": [
-    {
-      "context_pack": "pdf-generation",
-      "reason": "Load only if output becomes PDF or report-oriented."
-    }
-  ],
+  "validation_strategy_status": "active",
+  "latest_generation": "GEN-004",
+  "latest_validation_gate_result": "pass_non_phase_exit",
   "upstream_dependencies": [
     "demand-data-generation",
     "local-website-growth-assessment",
@@ -29,12 +26,9 @@
     "northvalley-client-success"
   ],
   "central_mde_sync_status": "refreshed_from_central_mde_2026_06_27",
-  "validation_strategy_status": "active",
-  "latest_generation": "GEN-004",
-  "latest_validation_gate_result": "pass_non_phase_exit",
   "source_central_mde_generation": "GEN-008",
-  "confidentiality": "public_repository_private_client_inputs_excluded",
-  "launch_pack": "../mde/project-launches/client-website-build-brief-generator",
-  "created_at": "2026-06-15",
-  "updated_at": "2026-06-27"
+  "repo": "git@github.com:Northvalley-Intelligence/client-website-build-brief-generator.git",
+  "branch": "main",
+  "production_deployed": false,
+  "last_sync_note": "Existing MDE project refreshed from ../mde without re-adoption. Added full project outbox contract, portfolio sync metadata, repository governance, summary-first reporting, and Third-Person Validation Gate tracking."
 }

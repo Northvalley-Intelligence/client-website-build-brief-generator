@@ -4,7 +4,7 @@
     {
       "tool": "json-syntax-check",
       "category": "Technical",
-      "total_runs": 2,
+      "total_runs": 3,
       "total_findings": 0,
       "critical_findings_found": 0,
       "high_findings_found": 0,
@@ -90,7 +90,82 @@
       "average_cost": null,
       "last_useful_finding_generation": "GEN-003",
       "recommendation": "keep"
+    },
+    {
+      "tool": "central-context-refresh-review",
+      "category": "Mission Coverage",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-004",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "project-outbox-contract-review",
+      "category": "Mission Coverage",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-004",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "repository-governance-sync-review",
+      "category": "Technical",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-004",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "third-person-validation-gate-applicability-review",
+      "category": "Mission Coverage",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-004",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "git-diff-whitespace-check",
+      "category": "Technical",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": null,
+      "recommendation": "keep"
     }
   ],
-  "updated_at": "2026-06-19"
+  "updated_at": "2026-06-27"
 }

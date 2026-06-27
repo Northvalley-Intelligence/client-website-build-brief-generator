@@ -5,6 +5,7 @@
   "phase_goal": "Define mission, project identity, dependencies, risk register, initial task graph, and validation strategy before implementation.",
   "mde_status": "generation_0_intake_portal_specified",
   "implementation_status": "not_started",
+  "latest_generation": "GEN-004",
   "current_focus": [
     "consume demand data and website assessment reports",
     "detect stale assessment data",
@@ -13,6 +14,20 @@
     "generate client questions, website mission, technical brief, content-needed checklist, validation strategy suggestion, and Codex build prompt",
     "record outbox event for central mde"
   ],
+  "central_mde_refresh": {
+    "status": "refreshed",
+    "source_path": "../mde",
+    "source_central_generation": "GEN-008",
+    "refreshed_at": "2026-06-27",
+    "details_loaded": [
+      "project outbox contract",
+      "repository governance",
+      "summary-first communication",
+      "Third-Person Validation Gate model",
+      "client website build context pack",
+      "website assessment to build context pack"
+    ]
+  },
   "loaded_context_packs": [
     "client-website-build",
     "website-assessment-to-build"
@@ -28,8 +43,8 @@
     "required_passes": 2,
     "pass_count": 0,
     "status": "not_run",
-    "reason": "Generation 0 bootstrap artifacts are created, but no implementation or full validation gate has run yet."
+    "reason": "Generation 0 bootstrap and central MDE refresh artifacts are created, but no implementation or full phase-exit Validation Gate has run yet."
   },
-  "next_recommended_action": "Implement the intake portal from docs/intake-portal-product-spec.md and .mde/intake-portal-form-schema.json, with client submissions stored privately outside this public repo.",
-  "updated_at": "2026-06-19"
+  "next_recommended_action": "Continue Generation 0 by confirming upstream assessment and demand data source formats, then implement the intake portal only if that remains the selected next slice.",
+  "updated_at": "2026-06-27"
 }

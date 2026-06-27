@@ -37,8 +37,21 @@
     },
     {
       "item": "Record outbox event and learning triage.",
-      "status": "completed"
+      "status": "completed",
+      "evidence": [
+        ".mde/outbox/events.jsonl"
+      ]
+    },
+    {
+      "item": "Sync project with current central MDE outbox, governance, and validation gate details.",
+      "status": "completed",
+      "evidence": [
+        ".mde/outbox/portfolio-sync.json",
+        ".mde/validation-strategy.json",
+        ".mde/generations/GEN-004.json",
+        ".mde/validation-runs/VAL-004.json"
+      ]
     }
   ],
-  "updated_at": "2026-06-19"
+  "updated_at": "2026-06-27"
 }

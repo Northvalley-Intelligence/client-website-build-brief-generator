@@ -1,8 +1,8 @@
 # Mission
 
-Generate the latest client website build prompt, client intake checklist, technical brief, website mission, content needs, and validation plan using assessment reports, client intake, demand data, and current MDE validation logic.
+Generate the latest client website launch pack, including a Codex build prompt, client intake checklist, technical brief, website mission, content needs, validation plan, and deployment checklist using assessment reports, client intake, demand data, and current MDE validation logic.
 
-The product helps North Valley start client website builds with current evidence, clear missing information, and project-specific validation rather than copying old sites.
+The product helps North Valley start client website builds with current evidence, clear missing information, SEO/AEO and service-area strategy, Northvalley GitHub defaults, the medinaclean-style Next.js/OpenNext Cloudflare baseline, branch synchronization rules, and project-specific validation rather than copying old sites.
 
 ## Current Phase
 
@@ -19,7 +19,8 @@ Define the local mission, project identity, dependencies, risk register, initial
 - Identify missing client details and content needs instead of inventing facts.
 - Protect client privacy, internal MDE strategy, and confidential cross-client learning.
 - Generate a client-safe launch pack with client questions, website mission, technical brief, content-needed checklist, validation strategy suggestion, and Codex build prompt.
-- Keep future client website repos aligned to Northvalley repository, Next.js, Cloudflare Workers, and validation expectations.
+- Keep future client website repos aligned to the Northvalley Intelligence GitHub organization, `main` branch default, Next.js/TypeScript/React, Node 22, npm, OpenNext Cloudflare, wrangler, GitHub Actions, and validation expectations.
+- Require `main`/`prod` synchronization checks and deployed commit SHA recording when a generated client website uses a separate `prod` branch.
 - Record outbox events for central MDE without coupling client-safe artifacts to private central ledgers.
 
 ## Non-Goals For Generation 0

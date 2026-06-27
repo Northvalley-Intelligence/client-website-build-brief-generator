@@ -1,7 +1,7 @@
 {
   "strategy_id": "VALSTRAT-client-website-build-brief-generator-002",
-  "version": 2,
-  "status": "seeded_for_generation_0",
+  "version": 3,
+  "status": "active_for_generation_0",
   "project_type": "content and prompt generation system",
   "artifact_profiles": [
     "website_assessment",
@@ -199,8 +199,88 @@
     "SEO/AEO service-area coverage review",
     "Northvalley repo and Cloudflare deployment checklist",
     "main/prod branch sync requirement review",
-    "client-safe artifact review"
+    "client-safe artifact review",
+    "project outbox contract review",
+    "repository governance sync review",
+    "Third-Person Validation Gate applicability review"
   ],
+  "repository_governance": {
+    "session_home_write_scope_required": true,
+    "github_submission_required_after_code_changes": true,
+    "github_submission_required_after_validation_readiness": true,
+    "production_parity_required_for_deployed_projects": true,
+    "blocked_submission_must_be_recorded": true,
+    "central_mde_read_only_from_project_session": true,
+    "cross_repo_changes_go_through_outbox_or_handoff": true
+  },
+  "reporting_governance": {
+    "summary_first_agent_to_user_communication": true,
+    "raw_code_or_diff_requires_explicit_request": true,
+    "long_command_output_requires_summary": true,
+    "default_report_fields": [
+      "current_action",
+      "why_it_matters",
+      "mission_impact",
+      "files_or_components",
+      "validation",
+      "findings",
+      "commit_or_deploy_status",
+      "next_action"
+    ]
+  },
+  "validation_gates": {
+    "description": "Meaningful user-facing or mission-critical work uses a Primary Validation Gate plus a Third-Person Validation Gate. Generation 0 still requires project-specific validation before phase exit.",
+    "primary_validation_gate": {
+      "purpose": "Proves the implementation or artifact works functionally and technically.",
+      "result_values": [
+        "pass",
+        "fail",
+        "blocked"
+      ]
+    },
+    "third_person_validation_gate": {
+      "purpose": "Independently reviews the result from the user's point of view for usability, mission fit, role fit, workflow fit, edge cases, data shape, environment, and integration risks.",
+      "required_for_user_facing_or_mission_critical_work": true,
+      "result_values": [
+        "pass",
+        "fail",
+        "accepted_with_findings",
+        "deferred_with_reason"
+      ]
+    }
+  },
+  "third_person_validation_gate": {
+    "description": "The Third-Person Validation Gate is a distinct gate, not a duplicate rerun.",
+    "independent_design_required": true,
+    "primary_focus": [
+      "usability",
+      "mission_fit",
+      "role_fit",
+      "workflow_fit"
+    ],
+    "different_tests_or_validation_angles_preferred": true,
+    "same_exact_rerun_counts_only_for": [
+      "nondeterministic behavior",
+      "environment-sensitive behavior",
+      "external dependency instability",
+      "known flaky paths",
+      "concurrency or timing risk"
+    ],
+    "gate_outcome_values": [
+      "pass",
+      "fail",
+      "accepted_with_findings",
+      "deferred_with_reason"
+    ],
+    "value_add_tracking_required": true,
+    "final_value_outcome_values": [
+      "new_findings",
+      "decision_changed",
+      "coverage_added",
+      "no_new_findings"
+    ],
+    "reevaluate_after_consecutive_no_signal_reviews": 5
+  },
   "sample_fixtures_required": [
     {
       "fixture": "assessment-with-missing-service-area-pages",
@@ -245,7 +325,7 @@
     "assessment_traceability": 1
   },
   "second_run_policy": {
-    "description": "Two independent Validation Gate passes are required for phase exit, with risk-based rerun.",
+    "description": "Generation 0 phase exit requires clean project-specific validation, with a Primary Validation Gate and distinct Third-Person Validation Gate for meaningful user-facing or mission-critical work. Risk-based reruns still apply to changed, failed, or high-risk checks.",
     "rerun_required": [
       "all Critical validations",
       "failed validations",
@@ -260,5 +340,5 @@
     ]
   },
   "created_at": "2026-06-15",
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-27"
 }
