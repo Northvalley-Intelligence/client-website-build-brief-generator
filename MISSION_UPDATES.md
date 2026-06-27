@@ -34,3 +34,8 @@ Keep this concise and human-readable.
 - Reason: Ferosh requested the project be refreshed with the latest central MDE details.
 - Discovered through: `../mde/prompts/existing-mde-open-session-sync.prompt.md`, `../mde/templates/project-outbox-contract.md`, `../mde/runbooks/repository-governance.md`, `../mde/briefings/current-platform-brief.md`, and `../mde/runbooks/third-person-validation-gate.md`.
 - Impact: Local MDE now preserves the existing mission/generations while adding the current outbox sync contract, portfolio sync metadata, repository governance expectations, summary-first reporting rules, and Third-Person Validation Gate tracking.
+
+- Mission update: Captured reusable Lori learnings for public client website copy.
+- Reason: Ferosh provided a guardrail prompt for client website builder work before generation, editing, validation, or deployment.
+- Discovered through: direct user prompt.
+- Impact: `README.md`, `.mde/validation-strategy.json`, `.mde/bdd-index.json`, and central outbox records now require generated client website prompts to prevent AI/process wording, public placeholders, invented proof, and unsynced production handoffs.

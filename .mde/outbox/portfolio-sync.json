@@ -14,7 +14,7 @@
     "website-assessment-to-build"
   ],
   "validation_strategy_status": "active",
-  "latest_generation": "GEN-004",
+  "latest_generation": "GEN-005",
   "latest_validation_gate_result": "pass_non_phase_exit",
   "upstream_dependencies": [
     "demand-data-generation",
@@ -30,5 +30,5 @@
   "repo": "git@github.com:Northvalley-Intelligence/client-website-build-brief-generator.git",
   "branch": "main",
   "production_deployed": false,
-  "last_sync_note": "Existing MDE project refreshed from ../mde without re-adoption. Added full project outbox contract, portfolio sync metadata, repository governance, summary-first reporting, and Third-Person Validation Gate tracking."
+  "last_sync_note": "Existing MDE project refreshed from ../mde without re-adoption. Added full project outbox contract, portfolio sync metadata, repository governance, summary-first reporting, Third-Person Validation Gate tracking, and Lori public-copy guardrails for generated client websites."
 }

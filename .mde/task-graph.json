@@ -148,7 +148,22 @@
         ".mde/intake-portal-form-schema.json"
       ],
       "output": "Client-friendly intake portal strategy with minimal mandatory fields, optional expanded details, collapsed technical section, assessment/demand defaults, upload limit, privacy rules, lifecycle states, and launch-package mappings."
+    },
+    {
+      "task_id": "G0-014",
+      "title": "Capture public client website copy guardrails",
+      "status": "completed",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-001"
+      ],
+      "evidence": [
+        "README.md",
+        ".mde/validation-strategy.json",
+        ".mde/bdd-index.json"
+      ],
+      "output": "Reusable Lori learnings merged into the existing README builder instructions for human-written public copy, forbidden internal/process phrases, truth/proof limits, placeholder removal, route scanning, and GitHub/production sync handoff requirements."
     }
   ],
-  "updated_at": "2026-06-19"
+  "updated_at": "2026-06-27"
 }

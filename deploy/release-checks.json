@@ -8,7 +8,9 @@
     "tests pass",
     "generated output schemas validate",
     "privacy/confidentiality review passes",
+    "generated client website prompt requires public-route AI/process wording scan",
+    "generated client website prompt requires placeholder/public proof validation",
     "sample generated launch pack passes validation gate twice"
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-27"
 }

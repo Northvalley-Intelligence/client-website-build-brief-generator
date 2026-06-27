@@ -5,12 +5,13 @@
   "phase_goal": "Define mission, project identity, dependencies, risk register, initial task graph, and validation strategy before implementation.",
   "mde_status": "generation_0_intake_portal_specified",
   "implementation_status": "not_started",
-  "latest_generation": "GEN-004",
+  "latest_generation": "GEN-005",
   "current_focus": [
     "consume demand data and website assessment reports",
     "detect stale assessment data",
     "identify missing client details",
     "protect privacy and confidentiality",
+    "keep public client website copy polished, customer-facing, and free of AI/process/internal planning language",
     "generate client questions, website mission, technical brief, content-needed checklist, validation strategy suggestion, and Codex build prompt",
     "record outbox event for central mde"
   ],
@@ -45,6 +46,6 @@
     "status": "not_run",
     "reason": "Generation 0 bootstrap and central MDE refresh artifacts are created, but no implementation or full phase-exit Validation Gate has run yet."
   },
-  "next_recommended_action": "Continue Generation 0 by confirming upstream assessment and demand data source formats, then implement the intake portal only if that remains the selected next slice.",
+  "next_recommended_action": "Continue Generation 0 by confirming upstream assessment and demand data source formats, then implement generator output contracts that include the public copy guardrail and forbidden-phrase route validation.",
   "updated_at": "2026-06-27"
 }

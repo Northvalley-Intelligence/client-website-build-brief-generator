@@ -63,7 +63,16 @@
       "impact": "Ferosh may need to manually reconstruct missing instructions or private context.",
       "mitigation": "Validate handoff clarity, grouped client questions, explicit assumptions, and standalone codex-build.prompt.md.",
       "status": "open"
+    },
+    {
+      "risk_id": "RISK-008",
+      "severity": "Critical",
+      "category": "Usability",
+      "summary": "Generated public client website pages may expose AI/process wording, internal notes, placeholders, or template filler.",
+      "impact": "Visitors may feel the website was AI-created, website-builder-generated, or assembled from internal notes, damaging credibility and conversion.",
+      "mitigation": "Require generated prompts to include the Lori public-copy guardrail, route-level forbidden phrase scan, placeholder route review, human copywriter read-through, and handoff counts for remaining process wording and public placeholders.",
+      "status": "open"
     }
   ],
-  "updated_at": "2026-06-15"
+  "updated_at": "2026-06-27"
 }

@@ -1,6 +1,6 @@
 {
   "strategy_id": "VALSTRAT-client-website-build-brief-generator-002",
-  "version": 3,
+  "version": 4,
   "status": "active_for_generation_0",
   "project_type": "content and prompt generation system",
   "artifact_profiles": [
@@ -157,6 +157,43 @@
       ]
     },
     {
+      "category": "Usability",
+      "required": true,
+      "priority": "Critical",
+      "tools_or_methods": [
+        "public copy guardrail review",
+        "forbidden internal/process phrase scan",
+        "public route placeholder review",
+        "human copywriter read-through"
+      ],
+      "reason": "Generated client websites must feel specific, credible, and human-written; visitors must not see AI, SEO, template, implementation, or internal planning language.",
+      "required_evidence": [
+        "generated build prompt embeds the README public website copy requirements",
+        "public routes are scanned for forbidden internal/process phrases before handoff",
+        "remaining AI/process wording count is 0",
+        "remaining public placeholder pages count is 0",
+        "placeholder/sample pages are not public, not linked in navigation, or return 404",
+        "service pages describe actual services rather than why a page exists",
+        "customer-facing headings replace internal headings",
+        "images are real supplied or approved assets with factual captions"
+      ]
+    },
+    {
+      "category": "Functional",
+      "required": true,
+      "priority": "Critical",
+      "tools_or_methods": [
+        "truth and proof review",
+        "client approval traceability review"
+      ],
+      "reason": "Generated public pages must use only verified facts, client-approved content, supplied photos, and approved claims.",
+      "required_evidence": [
+        "no invented testimonials, review snippets, customer names, ratings, review counts, certifications, staff bios, project stories, before/after outcomes, case studies, awards, guarantees, services, locations, or credentials",
+        "client-dependent sections are removed from public routes until supplied and approved",
+        "client-dependent remaining items are listed only in private handoff or content-needed artifacts"
+      ]
+    },
+    {
       "category": "Mission Coverage",
       "required": true,
       "priority": "Critical",
@@ -190,6 +227,12 @@
       "required": true,
       "priority": "High",
       "reason": "Structured generator outputs should remain parseable and suitable for automation."
+    },
+    {
+      "name": "public-route-forbidden-phrase-scan",
+      "required": true,
+      "priority": "Critical",
+      "reason": "Generated client website repos must add a test or script that checks every public customer route for internal/process phrases before handoff and after production deploy."
     }
   ],
   "mde_native_validators": [
@@ -200,6 +243,9 @@
     "Northvalley repo and Cloudflare deployment checklist",
     "main/prod branch sync requirement review",
     "client-safe artifact review",
+    "public copy guardrail review",
+    "truth and proof review",
+    "public placeholder route review",
     "project outbox contract review",
     "repository governance sync review",
     "Third-Person Validation Gate applicability review"
@@ -301,6 +347,10 @@
     {
       "fixture": "client-with-prod-branch-deploy-policy",
       "purpose": "Prove the generator includes the main/prod sync check before deployment."
+    },
+    {
+      "fixture": "public-copy-with-internal-process-language",
+      "purpose": "Prove the generator requires public route validation that catches AI/process wording, placeholder pages, internal headings, and invented proof."
     }
   ],
   "skipped_validations": [],
@@ -322,7 +372,9 @@
     "high_priority_context_pack_rules": 0.9,
     "required_output_artifacts": 1,
     "technical_deployment_constraints": 1,
-    "assessment_traceability": 1
+    "assessment_traceability": 1,
+    "public_copy_guardrail": 1,
+    "truth_and_proof_guardrail": 1
   },
   "second_run_policy": {
     "description": "Generation 0 phase exit requires clean project-specific validation, with a Primary Validation Gate and distinct Third-Person Validation Gate for meaningful user-facing or mission-critical work. Risk-based reruns still apply to changed, failed, or high-risk checks.",
@@ -332,6 +384,8 @@
       "changed-output validations",
       "assessment traceability checks",
       "client-safe artifact checks",
+      "public copy guardrail checks",
+      "truth and proof checks",
       "technical deployment constraints"
     ],
     "may_skip_with_reason": [

@@ -112,7 +112,37 @@
       "when": "Ferosh marks it ready for launch-package generation",
       "then": "the generator can create the client summary, missing-info checklist, content-needed checklist, website brief, validation plan, deployment notes, and codex-build.prompt.md from structured fields",
       "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C009",
+      "severity": "Critical",
+      "category": "Usability",
+      "title": "Generated client website prompts prevent public AI and process wording",
+      "given": "a generated Codex build prompt will create or edit public client website routes",
+      "when": "the generator prepares the launch pack",
+      "then": "the prompt requires every public route to be reviewed and automatically scanned for internal/process phrases, with remaining AI/process wording reported as 0 before handoff",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C010",
+      "severity": "Critical",
+      "category": "Functional",
+      "title": "Generated client websites do not publish placeholders or invented proof",
+      "given": "client intake does not include testimonials, reviews, project stories, awards, credentials, service claims, locations, or approved photos",
+      "when": "the generator prepares public website requirements",
+      "then": "the prompt requires those sections to stay off public routes until supplied and approved, and lists client-dependent items only in private handoff/content-needed artifacts",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-H004",
+      "severity": "High",
+      "category": "Technical",
+      "title": "Generated handoff aligns GitHub and production evidence",
+      "given": "a generated client website build is deployed to production",
+      "when": "the build agent prepares the handoff",
+      "then": "the prompt requires local validation, production validation, committed changes, pushed origin/main, deployed URL/version, and aligned local main, origin/main, and production evidence",
+      "automation_status": "not_implemented"
     }
   ],
-  "updated_at": "2026-06-19"
+  "updated_at": "2026-06-27"
 }

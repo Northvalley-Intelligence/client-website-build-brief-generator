@@ -30,7 +30,7 @@
   ],
   "central_mde_sync_status": "refreshed_from_central_mde_2026_06_27",
   "validation_strategy_status": "active",
-  "latest_generation": "GEN-004",
+  "latest_generation": "GEN-005",
   "latest_validation_gate_result": "pass_non_phase_exit",
   "source_central_mde_generation": "GEN-008",
   "confidentiality": "public_repository_private_client_inputs_excluded",

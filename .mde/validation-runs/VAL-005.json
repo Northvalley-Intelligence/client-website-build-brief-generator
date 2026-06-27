@@ -1,0 +1,111 @@
+{
+  "validation_run_id": "VAL-005",
+  "validation_run_type": "lori_public_copy_guardrail_artifact_gate",
+  "generation": 0,
+  "phase": "Generation 0",
+  "started_at": "2026-06-27",
+  "completed_at": "2026-06-27",
+  "strategy_version": "VALSTRAT-client-website-build-brief-generator-002-v4",
+  "counts_toward_phase_exit": false,
+  "validations_executed": [
+    {
+      "name": "public-copy-guardrail-capture-review",
+      "category": "Usability",
+      "result": "pass",
+      "evidence": [
+        "README.md existing builder instructions now capture the mission, forbidden internal/process language, truth/proof rules, customer headings, page review, automated validation, handoff reporting, and GitHub/production sync rule.",
+        ".mde/validation-strategy.json marks the public copy guardrail and truth/proof review as Critical requirements."
+      ]
+    },
+    {
+      "name": "generated-prompt-validation-coverage-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        ".mde/bdd-index.json now includes Critical BDDs for public AI/process wording prevention and placeholder/invented proof prevention.",
+        "deploy/release-checks.json now includes future checks for public-route AI/process wording scan and placeholder/proof validation."
+      ]
+    },
+    {
+      "name": "central-outbox-learning-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        ".mde/outbox/lessons.jsonl records the reusable learning.",
+        ".mde/outbox/skill-update-candidates.jsonl records a central MDE context pack/validator promotion candidate.",
+        ".mde/outbox/impacts.jsonl records the central MDE impact without editing ../mde from this project session.",
+        "No standalone public-copy guardrail doc remains."
+      ]
+    },
+    {
+      "name": "json-jsonl-syntax-check",
+      "category": "Technical",
+      "result": "pass",
+      "evidence": [
+        "All .mde JSON files parse as JSON.",
+        "All nonblank .mde JSONL records parse as JSON."
+      ]
+    },
+    {
+      "name": "git-diff-whitespace-check",
+      "category": "Technical",
+      "result": "pass",
+      "evidence": [
+        "git diff --check completed without whitespace errors."
+      ]
+    }
+  ],
+  "validations_skipped": [
+    {
+      "name": "generated launch pack public route scan",
+      "reason": "No generator implementation, generated launch pack, or public client website routes exist yet."
+    },
+    {
+      "name": "production validation",
+      "reason": "This repo has no production deploy target and deploy/release-checks.json says deployment is not involved."
+    }
+  ],
+  "critical_findings": [],
+  "high_findings": [],
+  "coverage": {
+    "lori_guardrail_captured": 1,
+    "public_copy_guardrail_validation_defined": 1,
+    "truth_and_proof_validation_defined": 1,
+    "forbidden_phrase_scan_required_for_generated_sites": 1,
+    "central_learning_outbox_written": 1,
+    "implementation_validation_coverage": 0
+  },
+  "primary_validation_gate": {
+    "result": "pass",
+    "failed_categories": [],
+    "blocking_findings": [],
+    "evidence_quality": "adequate"
+  },
+  "third_person_validation_gate": {
+    "gate_outcome": "pass",
+    "reviewer_perspective": "third-person client website visitor and handoff reviewer",
+    "different_signal_attempted": "reviewed whether the captured guardrail prevents a visitor from seeing AI/process language and whether future handoffs require public route evidence",
+    "new_findings_by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "decisions_changed": [
+      "Classified Lori public-copy guardrails as Critical generated-prompt requirements."
+    ],
+    "coverage_added": [
+      "Public copy guardrail",
+      "Truth and proof guardrail",
+      "Public placeholder route review",
+      "Forbidden phrase route scan",
+      "GitHub and production sync handoff reporting"
+    ],
+    "product_code_changed_after_gate": false,
+    "final_value_outcome": "coverage_added"
+  },
+  "gate_result": "pass",
+  "phase_exit_pass_count_after_run": 0,
+  "reason": "The Lori guardrail was captured and validated as a Generation 0 artifact update, but this does not count as a full phase-exit Validation Gate for generator implementation.",
+  "evidence_quality": "adequate"
+}

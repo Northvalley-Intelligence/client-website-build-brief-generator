@@ -51,6 +51,17 @@
         ".mde/generations/GEN-004.json",
         ".mde/validation-runs/VAL-004.json"
       ]
+    },
+    {
+      "item": "Capture Lori public-copy guardrails for generated client website prompts.",
+      "status": "completed",
+      "evidence": [
+        "README.md",
+        ".mde/validation-strategy.json",
+        ".mde/bdd-index.json",
+        ".mde/outbox/lessons.jsonl",
+        ".mde/outbox/skill-update-candidates.jsonl"
+      ]
     }
   ],
   "updated_at": "2026-06-27"
