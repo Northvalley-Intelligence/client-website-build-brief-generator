@@ -10,6 +10,8 @@
     "privacy/confidentiality review passes",
     "generated client website prompt requires public-route AI/process wording scan",
     "generated client website prompt requires placeholder/public proof validation",
+    "generated client website prompt requires production URL validation for public setup language, removed sample pages, navigation, forms, and conversion paths",
+    "generated client website prompt requires stable client review report filename with Report History",
     "sample generated launch pack passes validation gate twice"
   ],
   "updated_at": "2026-06-27"

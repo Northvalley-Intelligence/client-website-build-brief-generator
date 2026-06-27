@@ -5,7 +5,7 @@
   "phase_goal": "Define mission, project identity, dependencies, risk register, initial task graph, and validation strategy before implementation.",
   "mde_status": "generation_0_intake_portal_specified",
   "implementation_status": "not_started",
-  "latest_generation": "GEN-005",
+  "latest_generation": "GEN-006",
   "current_focus": [
     "consume demand data and website assessment reports",
     "detect stale assessment data",

@@ -4,7 +4,7 @@
     {
       "tool": "json-syntax-check",
       "category": "Technical",
-      "total_runs": 3,
+      "total_runs": 4,
       "total_findings": 0,
       "critical_findings_found": 0,
       "high_findings_found": 0,
@@ -154,7 +154,7 @@
     {
       "tool": "git-diff-whitespace-check",
       "category": "Technical",
-      "total_runs": 2,
+      "total_runs": 3,
       "total_findings": 0,
       "critical_findings_found": 0,
       "high_findings_found": 0,
@@ -199,6 +199,21 @@
     {
       "tool": "central-outbox-learning-review",
       "category": "Mission Coverage",
+      "total_runs": 2,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-006",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "existing-builder-instruction-merge-review",
+      "category": "Mission Coverage",
       "total_runs": 1,
       "total_findings": 0,
       "critical_findings_found": 0,
@@ -208,7 +223,37 @@
       "findings_repeated_without_action": 0,
       "average_execution_time_seconds": null,
       "average_cost": null,
-      "last_useful_finding_generation": "GEN-005",
+      "last_useful_finding_generation": "GEN-006",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "launch-readiness-coverage-review",
+      "category": "Usability",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-006",
+      "recommendation": "keep"
+    },
+    {
+      "tool": "bdd-coverage-review",
+      "category": "Mission Coverage",
+      "total_runs": 1,
+      "total_findings": 0,
+      "critical_findings_found": 0,
+      "high_findings_found": 0,
+      "findings_accepted_as_valid": 0,
+      "findings_dismissed_as_false_positive": 0,
+      "findings_repeated_without_action": 0,
+      "average_execution_time_seconds": null,
+      "average_cost": null,
+      "last_useful_finding_generation": "GEN-006",
       "recommendation": "keep"
     }
   ],

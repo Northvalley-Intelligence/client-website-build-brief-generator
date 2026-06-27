@@ -1,0 +1,121 @@
+{
+  "validation_run_id": "VAL-006",
+  "validation_run_type": "lori_launch_readiness_instruction_gate",
+  "generation": 0,
+  "phase": "Generation 0",
+  "started_at": "2026-06-27",
+  "completed_at": "2026-06-27",
+  "strategy_version": "VALSTRAT-client-website-build-brief-generator-002-v5",
+  "counts_toward_phase_exit": false,
+  "validations_executed": [
+    {
+      "name": "existing-builder-instruction-merge-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        "README.md remains the single website builder instruction source.",
+        "No duplicate public-copy or launch-readiness doc was created."
+      ]
+    },
+    {
+      "name": "launch-readiness-coverage-review",
+      "category": "Usability",
+      "result": "pass",
+      "evidence": [
+        "README.md now covers all visitor-facing surfaces, including metadata, schema, public API responses, forms, empty states, error messages, articles, projects, services, FAQs, navigation, and conversion paths.",
+        ".mde/validation-strategy.json now requires production public-content validation, sample/demo removal, form fallback review, stable report filename review, and client issue handoff evidence."
+      ]
+    },
+    {
+      "name": "bdd-coverage-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        ".mde/bdd-index.json includes Critical scenarios for visitor-facing surface validation and direct cleanup of sample/setup/fake content.",
+        ".mde/bdd-index.json includes High scenario coverage for stable client review handoff reports."
+      ]
+    },
+    {
+      "name": "central-outbox-learning-review",
+      "category": "Mission Coverage",
+      "result": "pass",
+      "evidence": [
+        ".mde/outbox/lessons.jsonl records the launch-readiness cleanup learning.",
+        ".mde/outbox/skill-update-candidates.jsonl records the validator/context-pack promotion candidate.",
+        ".mde/outbox/impacts.jsonl records the central MDE impact without editing ../mde from this project session."
+      ]
+    },
+    {
+      "name": "json-jsonl-syntax-check",
+      "category": "Technical",
+      "result": "pass",
+      "evidence": [
+        "All .mde JSON files parse as JSON.",
+        "All nonblank .mde JSONL records parse as JSON."
+      ]
+    },
+    {
+      "name": "git-diff-whitespace-check",
+      "category": "Technical",
+      "result": "pass",
+      "evidence": [
+        "git diff --check completed without whitespace errors."
+      ]
+    }
+  ],
+  "validations_skipped": [
+    {
+      "name": "actual client-site cleanup",
+      "reason": "This repo is the generator, not the client website repo. The rules were applied to generated prompt requirements only."
+    },
+    {
+      "name": "production URL validation",
+      "reason": "This repo has no client-site production URL or deploy target."
+    }
+  ],
+  "critical_findings": [],
+  "high_findings": [],
+  "coverage": {
+    "single_instruction_source": 1,
+    "visitor_facing_surface_coverage": 1,
+    "sample_content_removal_coverage": 1,
+    "public_setup_language_coverage": 1,
+    "production_validation_requirement": 1,
+    "stable_report_requirement": 1,
+    "central_learning_outbox_written": 1,
+    "actual_client_site_cleanup_coverage": 0
+  },
+  "primary_validation_gate": {
+    "result": "pass",
+    "failed_categories": [],
+    "blocking_findings": [],
+    "evidence_quality": "adequate"
+  },
+  "third_person_validation_gate": {
+    "gate_outcome": "pass",
+    "reviewer_perspective": "third-person client website launch reviewer",
+    "different_signal_attempted": "reviewed whether the existing builder instructions now prevent handoff of public setup language, sample content, fake proof, weak fallbacks, duplicate reports, and unvalidated production surfaces",
+    "new_findings_by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "decisions_changed": [
+      "Replaced the weaker README builder instructions with the fuller launch-readiness rules."
+    ],
+    "coverage_added": [
+      "Visitor-facing metadata/schema/API response validation",
+      "Production public-content validation",
+      "Sample/demo content removal validation",
+      "Form fallback language validation",
+      "Stable client review report validation"
+    ],
+    "product_code_changed_after_gate": false,
+    "final_value_outcome": "coverage_added"
+  },
+  "gate_result": "pass",
+  "phase_exit_pass_count_after_run": 0,
+  "reason": "The launch-readiness rules were captured and validated as a Generation 0 artifact update, but this does not count as a full phase-exit Validation Gate for generator implementation.",
+  "evidence_quality": "adequate"
+}

@@ -163,6 +163,21 @@
         ".mde/bdd-index.json"
       ],
       "output": "Reusable Lori learnings merged into the existing README builder instructions for human-written public copy, forbidden internal/process phrases, truth/proof limits, placeholder removal, route scanning, and GitHub/production sync handoff requirements."
+    },
+    {
+      "task_id": "G0-015",
+      "title": "Strengthen website builder launch-readiness instructions",
+      "status": "completed",
+      "priority": "Critical",
+      "depends_on": [
+        "G0-014"
+      ],
+      "evidence": [
+        "README.md",
+        ".mde/validation-strategy.json",
+        ".mde/bdd-index.json"
+      ],
+      "output": "Expanded the existing website builder instructions to cover visitor-facing code/content surfaces, public API responses, metadata/schema, deleted sample URLs, form fallback language, local and production validation, stable client review reports, and issue-level before/after handoff evidence."
     }
   ],
   "updated_at": "2026-06-27"

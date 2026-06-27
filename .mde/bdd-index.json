@@ -142,6 +142,36 @@
       "when": "the build agent prepares the handoff",
       "then": "the prompt requires local validation, production validation, committed changes, pushed origin/main, deployed URL/version, and aligned local main, origin/main, and production evidence",
       "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C011",
+      "severity": "Critical",
+      "category": "Usability",
+      "title": "Generated client website prompts validate every visitor-facing surface for launch-readiness wording",
+      "given": "a generated client website contains pages, components, metadata, schema, public API responses, forms, empty states, and error messages",
+      "when": "the generated prompt defines cleanup and handoff validation",
+      "then": "it requires local and production checks proving those surfaces do not expose AI/process/template wording, public setup language, fake proof, or sample content",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-C012",
+      "severity": "Critical",
+      "category": "Functional",
+      "title": "Generated prompts remove public sample content instead of marking cleanup client-dependent",
+      "given": "a client website has public sample articles, demo pages, fake projects, fake testimonials, setup/configuration messages, or broken links to removed sample content",
+      "when": "the generated prompt prepares the launch-readiness task",
+      "then": "it requires the build agent to fix those issues directly, verify removed URLs return 404 or redirect appropriately, and reserve client-dependent status only for genuine missing client inputs",
+      "automation_status": "not_implemented"
+    },
+    {
+      "bdd_id": "BDD-H005",
+      "severity": "High",
+      "category": "Technical",
+      "title": "Generated client review handoff uses one stable report with issue-level before and after evidence",
+      "given": "a generated client website cleanup includes client review issues",
+      "when": "the build agent prepares the handoff report",
+      "then": "it uses one stable report filename with Report History and records each issue with details, status, before content, after content, latest link, and reporter/source",
+      "automation_status": "not_implemented"
     }
   ],
   "updated_at": "2026-06-27"

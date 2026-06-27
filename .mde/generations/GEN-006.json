@@ -1,0 +1,194 @@
+{
+  "generation_id": "GEN-006",
+  "mission_phase": "Generation 0",
+  "mission_version": "2026-06-27-lori-launch-readiness-cleanup",
+  "validation_strategy_version": "VALSTRAT-client-website-build-brief-generator-002-v5",
+  "start_time": "2026-06-27",
+  "end_time": "2026-06-27",
+  "focus": "Replace weaker website builder guidance with full Lori client-site cleanup and launch-readiness rules.",
+  "reason_generation_started": "Ferosh provided a fuller reusable website-builder cleanup prompt and clarified that it should merge into existing website builder instructions without duplicate docs.",
+  "reason_generation_ended": "The README builder instructions now cover launch-readiness cleanup across visitor-facing surfaces, production validation, sample/demo removal, form fallback language, stable client reports, and issue-level handoff evidence.",
+  "files_changed": [
+    "README.md",
+    "MISSION_UPDATES.md",
+    "deploy/release-checks.json",
+    "docs/operations/mde-status.md",
+    ".mde/state.json",
+    ".mde/project.json",
+    ".mde/validation-strategy.json",
+    ".mde/bdd-index.json",
+    ".mde/task-graph.json",
+    ".mde/progress.json",
+    ".mde/risk-register.json",
+    ".mde/decisions.jsonl",
+    ".mde/findings.json",
+    ".mde/validator-effectiveness.json",
+    ".mde/generation-summary.md",
+    ".mde/outbox/portfolio-sync.json",
+    ".mde/outbox/events.jsonl",
+    ".mde/outbox/lessons.jsonl",
+    ".mde/lessons-local.jsonl",
+    ".mde/outbox/impacts.jsonl",
+    ".mde/outbox/content-seeds.jsonl",
+    ".mde/outbox/skill-update-candidates.jsonl",
+    ".mde/validation-runs/VAL-006.json",
+    ".mde/generations/GEN-006.json"
+  ],
+  "production_files_changed": [],
+  "test_files_changed": [],
+  "config_files_changed": [
+    ".mde/validation-strategy.json",
+    "deploy/release-checks.json"
+  ],
+  "documentation_files_changed": [
+    "README.md",
+    "MISSION_UPDATES.md",
+    "docs/operations/mde-status.md",
+    ".mde/generation-summary.md"
+  ],
+  "lines_added": 596,
+  "lines_deleted": 48,
+  "net_loc_change": 548,
+  "validators": [
+    {
+      "tool": "existing-builder-instruction-merge-review",
+      "category": "Mission Coverage",
+      "executed": true,
+      "result": "pass",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "new_findings": 0,
+      "resolved_findings": 0,
+      "repeated_findings": 0,
+      "false_positives": 0,
+      "usefulness": "high"
+    },
+    {
+      "tool": "launch-readiness-coverage-review",
+      "category": "Usability",
+      "executed": true,
+      "result": "pass",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "new_findings": 0,
+      "resolved_findings": 0,
+      "repeated_findings": 0,
+      "false_positives": 0,
+      "usefulness": "high"
+    },
+    {
+      "tool": "bdd-coverage-review",
+      "category": "Mission Coverage",
+      "executed": true,
+      "result": "pass",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "new_findings": 0,
+      "resolved_findings": 0,
+      "repeated_findings": 0,
+      "false_positives": 0,
+      "usefulness": "high"
+    },
+    {
+      "tool": "central-outbox-learning-review",
+      "category": "Mission Coverage",
+      "executed": true,
+      "result": "pass",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "new_findings": 0,
+      "resolved_findings": 0,
+      "repeated_findings": 0,
+      "false_positives": 0,
+      "usefulness": "high"
+    },
+    {
+      "tool": "json-jsonl-syntax-check",
+      "category": "Technical",
+      "executed": true,
+      "result": "pass",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "new_findings": 0,
+      "resolved_findings": 0,
+      "repeated_findings": 0,
+      "false_positives": 0,
+      "usefulness": "high"
+    },
+    {
+      "tool": "git-diff-whitespace-check",
+      "category": "Technical",
+      "executed": true,
+      "result": "pass",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "new_findings": 0,
+      "resolved_findings": 0,
+      "repeated_findings": 0,
+      "false_positives": 0,
+      "usefulness": "medium"
+    }
+  ],
+  "third_person_validation_gate_value": {
+    "gate_outcome": "pass",
+    "reviewer_perspective": "third-person client website launch reviewer",
+    "different_signal_attempted": "reviewed whether the existing builder instructions now prevent handoff of public setup language, sample content, fake proof, weak fallbacks, duplicate reports, and unvalidated production surfaces",
+    "new_findings_by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "decisions_changed": [
+      "Replaced the weaker README builder instructions with the fuller launch-readiness rules."
+    ],
+    "coverage_added": [
+      "Visitor-facing metadata/schema/API response validation",
+      "Production public-content validation",
+      "Sample/demo content removal validation",
+      "Form fallback language validation",
+      "Stable client review report validation"
+    ],
+    "product_code_changed_after_gate": false,
+    "final_value_outcome": "coverage_added"
+  },
+  "validation_gate": {
+    "result": "pass_non_phase_exit",
+    "failed_categories": [],
+    "blocking_findings": [],
+    "pass_count": "0/2",
+    "pass_count_reset": false,
+    "evidence_quality": "adequate"
+  },
+  "findings_by_severity": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "evidence_quality_notes": "Artifact-level validation is adequate for preserving the stronger reusable learning in the existing builder instructions without duplicate docs. Generator implementation and actual client-site cleanup remain pending."
+}

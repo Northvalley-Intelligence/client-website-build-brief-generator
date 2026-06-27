@@ -16,7 +16,7 @@ Define project identity, local MDE state, dependencies, risk register, initial t
 - Initial risk register and task graph are recorded.
 - Validation strategy is seeded from the launch pack.
 - Central MDE outbox event is recorded locally.
-- Public client website copy guardrails are merged into the existing README builder instructions for generated build prompts.
+- Public client website cleanup and launch-readiness guardrails are merged into the existing README builder instructions for generated build prompts.
 
 ## Not Ready
 
@@ -24,8 +24,8 @@ Define project identity, local MDE state, dependencies, risk register, initial t
 - Generator input and output schemas are not implemented.
 - Stale assessment, missing detail, privacy, and traceability checks are not implemented.
 - No sample launch pack has been generated from controlled fixture data.
-- No generated launch pack has yet proven the public-route forbidden phrase scan on a sample client website.
+- No generated launch pack has yet proven the public-route forbidden phrase scan, sample-content removal, form fallback review, stable handoff report, or production URL validation on a sample client website.
 
 ## Recommendation
 
-Continue with schema design and controlled fixtures before implementing generation logic. The first sample launch pack should prove the public copy guardrail, truth/proof review, and forbidden phrase route scan in addition to assessment and deployment checks.
+Continue with schema design and controlled fixtures before implementing generation logic. The first sample launch pack should prove the public copy guardrail, truth/proof review, forbidden phrase route scan, production URL validation, sample/demo removal, form fallback review, and stable client review report requirements in addition to assessment and deployment checks.

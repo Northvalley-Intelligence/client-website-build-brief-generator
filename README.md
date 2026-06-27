@@ -48,48 +48,72 @@ Generated website build prompts must require every client website to feel like a
 
 Visitors should never feel the site was AI-created, website-builder-generated, template-filled, or assembled from internal notes.
 
-Public pages must not expose internal process language, including:
+This is a client-site cleanup and launch-readiness discipline, not a redesign instruction. Generated prompts should preserve the approved design direction, SEO structure, URLs, metadata, schema, navigation, page layouts, analytics, and conversion paths unless a specific quality issue requires a change.
+
+Search all visitor-facing code and content, including pages, components, navigation, forms, metadata, schema, articles, project pages, service pages, FAQs, empty states, error messages, and public API responses. Public pages must not expose internal process language, including:
 
 - AI content
-- implementation notes
+- approved attribution
+- approved examples
+- API key
+- automatic delivery
+- configured yet
+- current site
+- current-site
+- customer journey
+- demo content
+- deployment
 - developer notes
+- doorway pages
+- example customer quote
+- explains why
+- implementation notes
+- implementation
+- not configured
+- page purpose
+- placeholder
+- placeholder examples
+- production version
+- quote fit
+- sample article
+- sample articles
+- service-area language
+- style demo
+- style demos
 - SEO notes
 - content strategy notes
-- placeholder examples
-- sample articles
-- style demos
+- staging
 - template explanations
-- current site
 - this page
+- this page should
 - this section
 - this article
-- this page should
 - the website should
-- customer journey
-- quote fit
-- page purpose
-- explains why
 - these images support
-- service-area language
-- doorway pages
-- committed and deployed
+- webhook
 
-Rewrite anything like that into natural customer-facing business English.
+HTML attributes such as `placeholder="..."` are acceptable only when the visible text is natural customer guidance. Do not expose the word "placeholder" to visitors as content.
+
+Rewrite internal copy into natural customer-facing business English.
 
 Examples:
 
 - Bad: "These images support the customer journey."
 - Good: "Our shop."
-- Bad: "The website should not promise mobile service."
+- Bad: "The website should not promise services the company does not offer."
 - Good: "We review each repair individually before providing a quote."
-- Bad: "This page groups nearby service areas."
-- Good: "Customers from Smyrna, Marietta, Atlanta, and nearby communities bring welding repair and fabrication projects to the shop."
+- Bad: "This page groups nearby service-area language."
+- Good: "The company serves customers from the listed local communities and nearby areas."
+- Bad: "Automatic delivery is not configured yet."
+- Good: "We could not send the request from the website right now. Please call or email with your details."
 - Bad: "Example customer quote..."
 - Good: "Many customers bring small repairs, one-off fabrication projects, trailer components, gates, and specialty metal parts to the shop."
 
-Use only verified facts, client-approved content, supplied photos, and approved claims. Do not invent testimonials, review snippets, customer names, ratings, review counts, certifications, staff biographies, project stories, before/after outcomes, case studies, awards, guarantees, services, locations, or credentials the client did not approve.
+Use only verified client facts, client-approved content, supplied photos, approved copy, and factual general statements. Do not invent testimonials, review excerpts, customer names, customer stories, project stories, before/after claims, certifications, awards, review counts, years in business, guarantees, service capabilities, locations served, or staff biographies.
 
 If a section needs client input, keep it off public pages until supplied and approved. Replace public placeholders with general factual statements, or remove the section from public navigation/runtime pages.
+
+If testimonials or review excerpts are not approved, use a factual statement instead and link to the official review/profile page when available.
 
 Use customer-facing headings such as:
 
@@ -105,14 +129,18 @@ Use customer-facing headings such as:
 
 Avoid internal headings such as:
 
+- Before Launch
+- Content Notes
+- Materials Context
+- Page Purpose
 - Shop Context
 - Quote Fit Details
 - Why These Images
-- Page Purpose
-- Content Notes
 - SEO Coverage
 - Sample Article
 - Style Demo
+
+Only change headings that still sound like internal notes. Do not rename good customer-facing headings unnecessarily.
 
 Before handoff, the generated client website prompt must require every public route to be reviewed:
 
@@ -124,7 +152,33 @@ Before handoff, the generated client website prompt must require every public ro
 6. Confirm service pages describe the actual service, not why the page exists.
 7. Confirm images are real supplied or approved assets with factual captions.
 
-Generated client website repos must add a test or script that checks every public customer route for forbidden internal/process phrases. These phrases may appear only in tests, internal docs, or validation reports as negative assertions.
+Pay special attention to service pages, service-area pages, project/gallery pages, reputation sections, article/blog pages, empty states, contact pages, quote/contact forms, FAQ pages, and 404/not-found pages.
+
+Do not publish fake projects, fake case studies, fake articles, fake social posts, or style-demo content. Use only supplied or approved assets. If supplied photos are repetitive, reorder for variety and remove weak duplicates rather than inventing new work.
+
+Remove public sample articles and public demo pages before launch. Confirm deleted sample URLs return 404 or redirect appropriately. Confirm navigation, sitemap, article indexes, and related links do not point to removed sample content.
+
+Public form notes, empty states, public API responses, and error messages must tell customers what to do next. They must not expose internal setup state such as "not configured", "automatic delivery", "webhook", "API key", "staging", "production version", "deployment", "missing environment variable", or "provider setup".
+
+Preferred fallback language:
+
+"We could not send the request from the website right now. Please call or email with your details."
+
+Only mark an item as client-dependent when it truly requires client input. Acceptable client-dependent items usually include additional real project photos, approved testimonials or review excerpts with attribution and permission, missing verified business facts, and final legal/compliance wording when required by the client. Do not mark cleanup, placeholder removal, fake-content removal, AI/process wording, broken navigation, or public implementation notes as client-dependent. Fix those directly.
+
+Generated client website repos must add or update automated tests that guard against public AI/process wording, sample content, fake testimonials, deleted sample pages, and public setup/configuration language. Forbidden phrases may appear only in tests, internal docs, or validation reports as negative assertions.
+
+After cleanup, generated prompts must require the project's local validation commands, including lint, typecheck, unit tests, build, and browser/e2e tests where available.
+
+Production validation must run against the deployed URL, not only local. Production validation should confirm:
+
+- public pages render
+- public pages do not expose AI/process/template wording
+- deleted sample pages return 404 or redirect appropriately
+- forms show customer-facing fallback language
+- no fake testimonials, projects, articles, or sample content are visible
+- navigation does not link to removed sample content
+- key conversion paths still work
 
 Do not call client website work complete after deploying from an uncommitted local working tree. Before handoff for a production-deployed client website, the generated prompt must require:
 
@@ -136,7 +190,17 @@ Do not call client website work complete after deploying from an uncommitted loc
 6. Push to GitHub `main`.
 7. Confirm local `main`, `origin/main`, and production evidence are aligned.
 
-The handoff report must include:
+Do not create multiple dated copies of the same client report. Keep one stable report filename and put dates in a Report History section inside the report. Use GitHub history as the backup trail.
+
+For each client review issue, the handoff report must include:
+
+1. Details.
+2. Status: Fixed, No longer relevant, or Not fixed.
+3. Explanation with before and after page content.
+4. Latest link where the current version is available.
+5. Reporter or source.
+
+The handoff report must also include:
 
 - Remaining AI/process wording found: should be 0.
 - Remaining public placeholder pages: should be 0.
@@ -144,6 +208,9 @@ The handoff report must include:
 - Local validation commands and results.
 - Production URL and deploy version when deployment is involved.
 - GitHub sync status.
+- A summary table with counts by issue status.
+
+Success criterion: no visitor-facing page, form, API response, article, project, testimonial area, navigation item, metadata field, schema field, or empty state should reveal AI assistance, template construction, implementation notes, SEO commentary, fake proof, sample content, or internal launch/setup state.
 
 ## Current Status
 

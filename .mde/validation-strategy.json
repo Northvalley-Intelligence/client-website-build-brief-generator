@@ -1,6 +1,6 @@
 {
   "strategy_id": "VALSTRAT-client-website-build-brief-generator-002",
-  "version": 4,
+  "version": 5,
   "status": "active_for_generation_0",
   "project_type": "content and prompt generation system",
   "artifact_profiles": [
@@ -164,18 +164,25 @@
         "public copy guardrail review",
         "forbidden internal/process phrase scan",
         "public route placeholder review",
-        "human copywriter read-through"
+        "human copywriter read-through",
+        "production public-route validation",
+        "form and empty-state fallback review"
       ],
       "reason": "Generated client websites must feel specific, credible, and human-written; visitors must not see AI, SEO, template, implementation, or internal planning language.",
       "required_evidence": [
         "generated build prompt embeds the README public website copy requirements",
-        "public routes are scanned for forbidden internal/process phrases before handoff",
+        "visitor-facing pages, components, navigation, forms, metadata, schema, articles, projects, services, FAQs, empty states, error messages, and public API responses are scanned for forbidden internal/process phrases before handoff",
+        "production validation against the deployed URL confirms public pages render and do not expose AI/process/template wording",
         "remaining AI/process wording count is 0",
         "remaining public placeholder pages count is 0",
+        "public setup/configuration language count is 0",
         "placeholder/sample pages are not public, not linked in navigation, or return 404",
+        "deleted sample URLs return 404 or redirect appropriately",
         "service pages describe actual services rather than why a page exists",
         "customer-facing headings replace internal headings",
-        "images are real supplied or approved assets with factual captions"
+        "forms, empty states, and error messages use customer-facing fallback language",
+        "images are real supplied or approved assets with factual captions",
+        "the generated prompt preserves approved design direction, SEO structure, URLs, metadata, schema, navigation, page layouts, analytics, and conversion paths unless a specific issue requires a change"
       ]
     },
     {
@@ -190,7 +197,25 @@
       "required_evidence": [
         "no invented testimonials, review snippets, customer names, ratings, review counts, certifications, staff bios, project stories, before/after outcomes, case studies, awards, guarantees, services, locations, or credentials",
         "client-dependent sections are removed from public routes until supplied and approved",
-        "client-dependent remaining items are listed only in private handoff or content-needed artifacts"
+        "fake projects, fake case studies, fake articles, fake social posts, and style-demo content are not public",
+        "client-dependent remaining items are listed only in private handoff or content-needed artifacts",
+        "cleanup, placeholder removal, fake-content removal, AI/process wording, broken navigation, and public implementation notes are fixed directly instead of marked client-dependent"
+      ]
+    },
+    {
+      "category": "Technical",
+      "required": true,
+      "priority": "High",
+      "tools_or_methods": [
+        "client review handoff report review",
+        "stable report filename review"
+      ],
+      "reason": "Generated client-site cleanup handoffs must be auditable without creating multiple dated report copies.",
+      "required_evidence": [
+        "one stable client review report filename is used",
+        "report dates are captured in a Report History section",
+        "each client review issue includes details, status, before content, after content, latest link, and reporter/source",
+        "handoff includes a summary table with counts by status and a short list of genuinely client-dependent items"
       ]
     },
     {
@@ -233,6 +258,12 @@
       "required": true,
       "priority": "Critical",
       "reason": "Generated client website repos must add a test or script that checks every public customer route for internal/process phrases before handoff and after production deploy."
+    },
+    {
+      "name": "production-public-content-validation",
+      "required": true,
+      "priority": "Critical",
+      "reason": "Generated client website handoffs must validate the deployed URL for public rendering, removed sample content, customer-facing form fallbacks, navigation, and conversion paths."
     }
   ],
   "mde_native_validators": [
@@ -246,6 +277,10 @@
     "public copy guardrail review",
     "truth and proof review",
     "public placeholder route review",
+    "public setup/configuration language review",
+    "sample content removal review",
+    "production public-route validation review",
+    "stable client report filename review",
     "project outbox contract review",
     "repository governance sync review",
     "Third-Person Validation Gate applicability review"
@@ -351,6 +386,10 @@
     {
       "fixture": "public-copy-with-internal-process-language",
       "purpose": "Prove the generator requires public route validation that catches AI/process wording, placeholder pages, internal headings, and invented proof."
+    },
+    {
+      "fixture": "client-site-with-sample-content-and-public-setup-language",
+      "purpose": "Prove the generator requires cleanup of sample/demo pages, fake testimonials/projects/articles, public setup/configuration language, and production URL validation."
     }
   ],
   "skipped_validations": [],
@@ -374,7 +413,9 @@
     "technical_deployment_constraints": 1,
     "assessment_traceability": 1,
     "public_copy_guardrail": 1,
-    "truth_and_proof_guardrail": 1
+    "truth_and_proof_guardrail": 1,
+    "production_public_content_validation": 1,
+    "client_review_handoff_reporting": 1
   },
   "second_run_policy": {
     "description": "Generation 0 phase exit requires clean project-specific validation, with a Primary Validation Gate and distinct Third-Person Validation Gate for meaningful user-facing or mission-critical work. Risk-based reruns still apply to changed, failed, or high-risk checks.",
@@ -386,6 +427,8 @@
       "client-safe artifact checks",
       "public copy guardrail checks",
       "truth and proof checks",
+      "production public content validation",
+      "client review handoff report checks",
       "technical deployment constraints"
     ],
     "may_skip_with_reason": [

@@ -39,3 +39,8 @@ Keep this concise and human-readable.
 - Reason: Ferosh provided a guardrail prompt for client website builder work before generation, editing, validation, or deployment.
 - Discovered through: direct user prompt.
 - Impact: `README.md`, `.mde/validation-strategy.json`, `.mde/bdd-index.json`, and central outbox records now require generated client website prompts to prevent AI/process wording, public placeholders, invented proof, and unsynced production handoffs.
+
+- Mission update: Strengthened the existing website builder instructions with full client-site cleanup and launch-readiness rules.
+- Reason: Ferosh clarified that the reusable rules should replace weaker/older builder guidance and must not create duplicate docs.
+- Discovered through: direct user prompt.
+- Impact: The single `README.md` Website Builder Instructions section now covers public API responses, metadata/schema, deleted sample URLs, form fallback language, production validation, stable report filenames, and client review issue handoff reporting.

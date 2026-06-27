@@ -2,6 +2,6 @@
   "project_id": "client-website-build-brief-generator",
   "generation": 0,
   "findings": [],
-  "note": "No validation findings have been recorded yet. GEN-005 captured a Critical public-copy guardrail requirement and passed artifact-level validation with no Critical or High findings, but implementation and full phase-exit Validation Gate execution have not started.",
+  "note": "No validation findings have been recorded yet. GEN-006 strengthened client-site cleanup and launch-readiness requirements and passed artifact-level validation with no Critical or High findings, but implementation and full phase-exit Validation Gate execution have not started.",
   "updated_at": "2026-06-27"
 }

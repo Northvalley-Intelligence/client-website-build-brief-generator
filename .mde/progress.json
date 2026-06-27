@@ -62,6 +62,16 @@
         ".mde/outbox/lessons.jsonl",
         ".mde/outbox/skill-update-candidates.jsonl"
       ]
+    },
+    {
+      "item": "Replace weaker website builder guidance with full launch-readiness cleanup rules.",
+      "status": "completed",
+      "evidence": [
+        "README.md",
+        ".mde/validation-strategy.json",
+        ".mde/bdd-index.json",
+        ".mde/validation-runs/VAL-006.json"
+      ]
     }
   ],
   "updated_at": "2026-06-27"
